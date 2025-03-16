@@ -24,13 +24,6 @@ namespace NivelStocareDate
             useri[numarUseri++] = u;
         }
 
-        public void afisareUseri()
-        {
-            for (int i = 0; i < numarUseri; i++)
-            {
-                Console.WriteLine(useri[i].to_str());
-            }
-        }
 
         public User cautaNume(string nume, string prenume)
         {

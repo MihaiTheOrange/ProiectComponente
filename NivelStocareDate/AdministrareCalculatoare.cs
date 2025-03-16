@@ -21,13 +21,7 @@ namespace NivelStocareDate
         {
             calculatoare[numarCalculatoare++] = c;
         }
-        public void afisareCalculatoare()
-        {
-            for (int i = 0; i < numarCalculatoare; i++)
-            {
-                Console.WriteLine(calculatoare[i].to_str());
-            }
-        }
+       
 
         public Calculator cautaDenumire(string denumire)
         {

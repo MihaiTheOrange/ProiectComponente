@@ -42,7 +42,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AdministrareCalculatoare.cs" />
+    <Compile Include="AdministrareCalculator_FisierText.cs" />
     <Compile Include="AdministrareUseri.cs" />
+    <Compile Include="AdministrareUser_FIsierText.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

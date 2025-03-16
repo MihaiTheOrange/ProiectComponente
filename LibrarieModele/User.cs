@@ -8,14 +8,33 @@ namespace LibrarieModele
 {
     public class User
     {
+        private const char SEPARATOR_PRINCIPAL_FISIER = ';';
+
+        private const int ID = 0;
+        private const int NUME = 1;
+        private const int PRENUME = 2;
+        private const int EMAIL = 3;
+        private const int ADRESA = 4;
+        private const int NRTELEFON = 5;
+
+
+        public static int IdStatic { get; set; } = 0;
+        public int IdUser { get; set; }
         public string nume { get; set; }
         public string prenume { get; set; }
         public string email { get; set; }
         public string adresa { get; set; }
         public string nrTelefon { get; set; }
 
-        public User(string _nume = "", string _prenume = "", string _email = "", string _adresa = "", string _nrTelefon = "")
+        public User()
         {
+            IdUser = IdStatic++;
+            nume = prenume = email = adresa = nrTelefon = string.Empty;
+        }
+
+        public User(string _nume, string _prenume, string _email, string _adresa, string _nrTelefon)
+        {
+            IdUser = IdStatic++;
             nume = _nume;
             prenume = _prenume;
             email = _email;
@@ -23,23 +42,36 @@ namespace LibrarieModele
             nrTelefon = _nrTelefon;
         }
 
-        public void citireTastatura()
+        public User(string linie)
         {
-            Console.WriteLine("Introduceti numele: ");
-            nume = Console.ReadLine();
-            Console.WriteLine("Introduceti prenumele: ");
-            prenume = Console.ReadLine();
-            Console.WriteLine("Introduceti email-ul: ");
-            email = Console.ReadLine();
-            Console.WriteLine("Introduceti adresa: ");
-            adresa = Console.ReadLine();
-            Console.WriteLine("Introduceti numarul de telefon: ");
-            nrTelefon = Console.ReadLine();
+            string[] date = linie.Split(SEPARATOR_PRINCIPAL_FISIER);
+            IdUser = Convert.ToInt32(date[ID]);
+            nume = date[NUME];
+            prenume = date[PRENUME];
+            email = date[EMAIL];
+            adresa = date[ADRESA];
+            nrTelefon = date[NRTELEFON];
         }
 
         public string to_str()
         {
-            return nume + " " + prenume + " " + email + " " + adresa + " " + nrTelefon;
+            return IdUser + " " + nume + " " + prenume + " " + email + " " + adresa + " " + nrTelefon;
         }
+
+
+        public string conversieLaSir_PentruFisier()
+        {
+            string obictUserPentruFisier = string.Format("{1}{0}{2}{0}{3}{0}{4}{0}{5}{0}{6}{0}",
+                SEPARATOR_PRINCIPAL_FISIER, //0
+                IdUser, //1
+                (nume ?? "NECUNOSCUT"), //2
+                (prenume ?? "NECUNOSCUT"), //3
+                (email ?? "NECUNOSCUT"), //4
+                (adresa ?? "NECUNOSCUT"), //5
+                (nrTelefon ?? "NECUNOSCUT") //6
+                );
+            return obictUserPentruFisier;
+        }
+
     }
 }
