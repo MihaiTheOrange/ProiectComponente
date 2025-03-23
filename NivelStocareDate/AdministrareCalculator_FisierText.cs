@@ -19,8 +19,9 @@ namespace NivelStocareDate
             Stream streamFisier = File.Open(numeFisier, FileMode.OpenOrCreate);
             streamFisier.Close();
         }
-        public void AddCalculator(Calculator c)
+        public void AddCalculator(Calculator c, ref int nrCalculatoare)
         {
+            c.IdCalculator = ++nrCalculatoare;
             using (StreamWriter swFisierText = new StreamWriter(numeFisier, true))
                 swFisierText.WriteLine(c.conversieLaSir_PentruFisier()); 
         }
@@ -34,11 +35,31 @@ namespace NivelStocareDate
                     string line;
                     while ((line = sr.ReadLine()) != null)
                     {
-                        calculatoare[nrCalculatoare++] = new Calculator(line);
+                    //Console.WriteLine(line);
+                    calculatoare[nrCalculatoare++] = new Calculator(line);
+                        
                     }
                 }
             
             return calculatoare;
+        }
+
+        public Calculator CautaCalculatorDenumire(string denumire)
+        {
+            Calculator calculator;
+            using (StreamReader sr = new StreamReader(numeFisier))
+            {
+                string line;
+                while ((line = sr.ReadLine()) != null)
+                {
+                    calculator = new Calculator(line);
+                    if (calculator.denumire == denumire)
+                    {
+                        return calculator;
+                    }
+                }
+            }
+            return null;
         }
     }
 }
