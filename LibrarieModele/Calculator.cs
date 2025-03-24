@@ -46,7 +46,7 @@ namespace LibrarieModele
             denumire = producator = CPU = GPU = carcasa = string.Empty;
         }
 
-        public Calculator(string _denumire, string _producator, string _CPU, int _producatorGPU, string _GPU, int _capacitateRAM, int _capacitateStocare, string _carcasa, FrontPanel _frontPanel, int _sursa)
+        public Calculator(string _denumire, string _producator, string _CPU, int _producatorGPU, string _GPU, int _capacitateRAM, int _capacitateStocare, string _carcasa, string _frontPanel, int _sursa)
         {
             IdCalculator = 0;
             denumire = _denumire;
@@ -57,7 +57,7 @@ namespace LibrarieModele
             capacitateRAM = _capacitateRAM;
             capacitateStocare = _capacitateStocare;
             carcasa = _carcasa;
-            frontPanel = _frontPanel;
+            frontPanel = (FrontPanel)Enum.Parse(typeof(FrontPanel), _frontPanel);
             sursa = _sursa;
         }
         public Calculator(string linieFisier)

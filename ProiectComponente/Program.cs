@@ -20,7 +20,7 @@ namespace ProiectComponente
             User ex = new User();
             User ex2 = new User("Popescu", "Ion", 1,  "email", "adresa", "nrTel");
             Calculator ex1 = new Calculator();
-            Calculator ex3 = new Calculator("Dell", "Dell", "Intel",1 ,"Nvidia", 8, 256, "ATX", FrontPanel.Jack2_5|FrontPanel.USB3, 500);
+            Calculator ex3 = new Calculator("Dell", "Dell", "Intel",1 ,"Nvidia", 8, 256, "ATX", "USB3, Jack2_5", 500);
             AdministrareUseri admin = new AdministrareUseri();
             AdministrareCalculatoare admin1 = new AdministrareCalculatoare();
             AdministrareUser_FIsierText adminFisierUseri = new AdministrareUser_FIsierText(numeFisierUseri);
