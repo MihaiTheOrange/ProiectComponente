@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LibrarieModele", "LibrarieM
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NivelStocareDate", "NivelStocareDate\NivelStocareDate.csproj", "{133582FD-20C9-409C-A920-15983947C0D2}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ComponenteProiect", "ComponenteProiect\ComponenteProiect.csproj", "{6393FFF3-AE75-4798-95E1-D316C19254B5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{133582FD-20C9-409C-A920-15983947C0D2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{133582FD-20C9-409C-A920-15983947C0D2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{133582FD-20C9-409C-A920-15983947C0D2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6393FFF3-AE75-4798-95E1-D316C19254B5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6393FFF3-AE75-4798-95E1-D316C19254B5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6393FFF3-AE75-4798-95E1-D316C19254B5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6393FFF3-AE75-4798-95E1-D316C19254B5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
