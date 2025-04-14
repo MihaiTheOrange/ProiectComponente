@@ -7,6 +7,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+
+using MetroFramework.Forms;
+using MetroFramework.Controls;
+
 using LibrarieModele;
 using NivelStocareDate;
 
@@ -14,7 +18,7 @@ using NivelStocareDate;
 
 namespace ComponenteProiect
 {
-    public partial class Form1: Form
+    public partial class Form1: MetroForm
     {
         AdministrareCalculator_FisierText adminCalc;
         AdministrareUser_FIsierText adminUser;
@@ -23,34 +27,34 @@ namespace ComponenteProiect
 
 
         //Calculatoare
-        private Label lblDenumire;
-        private Label lblProducator;
-        private Label lblCPU;
-        private Label lblProducatorGPU;
-        private Label lblGPU;
-        private Label lblCapacitateRAM;
-        private Label lblCapacitateStocare;
-        private Label lblCarcasa;
-        private Label lblFrontPanel;
-        private Label lblSursa;
+        private MetroLabel lblDenumire;
+        private MetroLabel lblProducator;
+        private MetroLabel lblCPU;
+        private MetroLabel lblProducatorGPU;
+        private MetroLabel lblGPU;
+        private MetroLabel lblCapacitateRAM;
+        private MetroLabel lblCapacitateStocare;
+        private MetroLabel lblCarcasa;
+        private MetroLabel lblFrontPanel;
+        private MetroLabel lblSursa;
         
-        private Label[] lblsDenumire;
-        private Label[] lblsProducator;
-        private Label[] lblsCPU;
-        private Label[] lblsProducatorGPU;
-        private Label[] lblsGPU;
-        private Label[] lblsCapacitateRAM;
-        private Label[] lblsCapacitateStocare;
-        private Label[] lblsCarcasa;
-        private Label[] lblsFrontPanel;
-        private Label[] lblsSursa;
+        private MetroLabel[] lblsDenumire;
+        private MetroLabel[] lblsProducator;
+        private MetroLabel[] lblsCPU;
+        private MetroLabel[] lblsProducatorGPU;
+        private MetroLabel[] lblsGPU;
+        private MetroLabel[] lblsCapacitateRAM;
+        private MetroLabel[] lblsCapacitateStocare;
+        private MetroLabel[] lblsCarcasa;
+        private MetroLabel[] lblsFrontPanel;
+        private MetroLabel[] lblsSursa;
 
         //Useri
-        private Label lblNume;
-        private Label lblPrenume;
+        private MetroLabel lblNume;
+        private MetroLabel lblPrenume;
 
-        private Label[] lblsNume;
-        private Label[] lblsPrenume;
+        private MetroLabel[] lblsNume;
+        private MetroLabel[] lblsPrenume;
 
 
         private const int LATIME_CONTROL = 100;
@@ -80,15 +84,15 @@ namespace ComponenteProiect
             this.Text = "Calculatoare";
 
 
-            //controale de tip label
-            lblDenumire = new Label();
+            //controale de tip MetroLabel
+            lblDenumire = new MetroLabel();
             lblDenumire.Width = LATIME_CONTROL;
             lblDenumire.Text = "Denumire";
             lblDenumire.Left = 0*DIMENSIUNE_PAS_X;
             lblDenumire.ForeColor = Color.Black;
             this.Controls.Add(lblDenumire);
 
-            lblProducator = new Label();
+            lblProducator = new MetroLabel();
             lblProducator.Width = LATIME_CONTROL;
             lblProducator.Text = "Producator";
             lblProducator.Left = 1*DIMENSIUNE_PAS_X;
@@ -96,7 +100,7 @@ namespace ComponenteProiect
             this.Controls.Add((lblProducator) );
 
             //lblCPU
-            lblCPU = new Label();
+            lblCPU = new MetroLabel();
             lblCPU.Width = LATIME_CONTROL;
             lblCPU.Text = "CPU";
             lblCPU.Left = 2*DIMENSIUNE_PAS_X;
@@ -104,7 +108,7 @@ namespace ComponenteProiect
             this.Controls.Add((lblCPU));
 
             //lblProducatorGPU
-            //lblProducatorGPU = new Label();
+            //lblProducatorGPU = new MetroLabel();
             //lblProducatorGPU.Width = LATIME_CONTROL;
             //lblProducatorGPU.Text = "Producator GPU";
             //lblProducatorGPU.Left = 4 * DIMENSIUNE_PAS_X;
@@ -112,7 +116,7 @@ namespace ComponenteProiect
             //this.Controls.Add((lblProducatorGPU));
 
             //lblGPU
-            lblGPU = new Label();
+            lblGPU = new MetroLabel();
             lblGPU.Width = LATIME_CONTROL;
             lblGPU.Text = "GPU";
             lblGPU.Left = 3 * DIMENSIUNE_PAS_X;
@@ -120,7 +124,7 @@ namespace ComponenteProiect
             this.Controls.Add((lblGPU));
 
             //lblCapacitateRAM
-            lblCapacitateRAM = new Label();
+            lblCapacitateRAM = new MetroLabel();
             lblCapacitateRAM.Width = LATIME_CONTROL;
             lblCapacitateRAM.Text = "Capacitate RAM";
             lblCapacitateRAM.Left = 4 * DIMENSIUNE_PAS_X;
@@ -128,7 +132,7 @@ namespace ComponenteProiect
             this.Controls.Add((lblCapacitateRAM));
 
             //lblCapacitateStocare
-            //lblCapacitateStocare = new Label();
+            //lblCapacitateStocare = new MetroLabel();
             //lblCapacitateStocare.Width = LATIME_CONTROL;
             //lblCapacitateStocare.Text = "Capacitate Stocare";
             //lblCapacitateStocare.Left = 7 * DIMENSIUNE_PAS_X;
@@ -136,7 +140,7 @@ namespace ComponenteProiect
             //this.Controls.Add((lblCapacitateStocare));
 
             //lblCarcasa
-            //lblCarcasa = new Label();
+            //lblCarcasa = new MetroLabel();
             //lblCarcasa.Width = LATIME_CONTROL;
             //lblCarcasa.Text = "Carcasa";
             //lblCarcasa.Left = 8 * DIMENSIUNE_PAS_X;
@@ -144,7 +148,7 @@ namespace ComponenteProiect
             //this.Controls.Add((lblCarcasa));
 
             //lblFrontPanel
-            //lblFrontPanel = new Label();
+            //lblFrontPanel = new MetroLabel();
             //lblFrontPanel.Width = LATIME_CONTROL;
             //lblFrontPanel.Text = "Front Panel";
             //lblFrontPanel.Left = 9 * DIMENSIUNE_PAS_X;
@@ -152,7 +156,7 @@ namespace ComponenteProiect
             //this.Controls.Add((lblFrontPanel));
 
             //lblSursa
-            //lblSursa = new Label();
+            //lblSursa = new MetroLabel();
             //lblSursa.Width = LATIME_CONTROL;
             //lblSursa.Text = "Sursa";
             //lblSursa.Left = 10 * DIMENSIUNE_PAS_X;
@@ -161,14 +165,14 @@ namespace ComponenteProiect
 
 
 
-            lblNume = new Label();
+            lblNume = new MetroLabel();
             lblNume.Width = LATIME_CONTROL;
             lblNume.Text = "Nume";
             lblNume.Left = 6 * DIMENSIUNE_PAS_X;
             lblNume.ForeColor = Color.Black;
             this.Controls.Add(lblNume);
 
-            lblPrenume = new Label();
+            lblPrenume = new MetroLabel();
             lblPrenume.Width = LATIME_CONTROL;
             lblPrenume.Text = "Prenume";
             lblPrenume.Left = 7 * DIMENSIUNE_PAS_X;
@@ -182,7 +186,7 @@ namespace ComponenteProiect
             AfisareUseri();
         }
 
-        private void testLabel(Label test)
+        private void testMetroLabel(MetroLabel test)
         {
             Calculator[] calculatoare = adminCalc.GetCalculatoare(out int nrCalculatoare);
             test.Width = LATIME_CONTROL;
@@ -195,18 +199,18 @@ namespace ComponenteProiect
         {
             User[] useri = adminUser.GetUseri(out int nrUseri);
             Array.Resize(ref useri, nrUseri);
-            lblsNume = new Label[nrUseri];
-            lblsPrenume = new Label[nrUseri];
+            lblsNume = new MetroLabel[nrUseri];
+            lblsPrenume = new MetroLabel[nrUseri];
             int i = 0;
             foreach (User user in useri)
             {
-                lblsNume[i] = new Label();
+                lblsNume[i] = new MetroLabel();
                 lblsNume[i].Width = LATIME_CONTROL;
                 lblsNume[i].Text = user.nume;
                 lblsNume[i].Left = 6 * DIMENSIUNE_PAS_X;
                 lblsNume[i].Top = (i + 1) * DIMENSIUNE_PAS_Y;
                 this.Controls.Add(lblsNume[i]);
-                lblsPrenume[i] = new Label();
+                lblsPrenume[i] = new MetroLabel();
                 lblsPrenume[i].Width = LATIME_CONTROL;
                 lblsPrenume[i].Text = user.prenume;
                 lblsPrenume[i].Left = 7 * DIMENSIUNE_PAS_X;
@@ -220,86 +224,86 @@ namespace ComponenteProiect
         {
             Calculator[] calculatoare = adminCalc.GetCalculatoare(out int nrCalculatoare);
             Array.Resize(ref calculatoare, nrCalculatoare);
-            lblsDenumire = new Label[nrCalculatoare];
-            lblsProducator = new Label[nrCalculatoare];
-            lblsCPU = new Label[nrCalculatoare];
-            //lblsProducatorGPU = new Label[nrCalculatoare];
-            lblsGPU = new Label[nrCalculatoare];
-            lblsCapacitateRAM = new Label[nrCalculatoare];
-            //lblsCapacitateStocare = new Label[nrCalculatoare];
-            //lblsCarcasa = new Label[nrCalculatoare];
-            //lblsFrontPanel = new Label[nrCalculatoare];
-            //lblsSursa = new Label[nrCalculatoare];
+            lblsDenumire = new MetroLabel[nrCalculatoare];
+            lblsProducator = new MetroLabel[nrCalculatoare];
+            lblsCPU = new MetroLabel[nrCalculatoare];
+            //lblsProducatorGPU = new MetroLabel[nrCalculatoare];
+            lblsGPU = new MetroLabel[nrCalculatoare];
+            lblsCapacitateRAM = new MetroLabel[nrCalculatoare];
+            //lblsCapacitateStocare = new MetroLabel[nrCalculatoare];
+            //lblsCarcasa = new MetroLabel[nrCalculatoare];
+            //lblsFrontPanel = new MetroLabel[nrCalculatoare];
+            //lblsSursa = new MetroLabel[nrCalculatoare];
 
 
 
             int i = 0;
             foreach(Calculator calculator in calculatoare)
             {
-                lblsDenumire[i] = new Label();
+                lblsDenumire[i] = new MetroLabel();
                 lblsDenumire[i].Width = LATIME_CONTROL;
                 lblsDenumire[i].Text = calculator.denumire;
                 lblsDenumire[i].Left = 0*DIMENSIUNE_PAS_X;
                 lblsDenumire[i].Top = (i + 1) * DIMENSIUNE_PAS_Y;
                 this.Controls.Add(lblsDenumire[i]);
 
-                lblsProducator[i] = new Label();
+                lblsProducator[i] = new MetroLabel();
                 lblsProducator[i].Width = LATIME_CONTROL;
                 lblsProducator[i].Text = calculator.producator;
                 lblsProducator[i].Left = 1 * DIMENSIUNE_PAS_X;
                 lblsProducator[i].Top = (i + 1) * DIMENSIUNE_PAS_Y;
                 this.Controls.Add(lblsProducator[i]);
 
-                lblsCPU[i] = new Label();
+                lblsCPU[i] = new MetroLabel();
                 lblsCPU[i].Width = LATIME_CONTROL;
                 lblsCPU[i].Text = calculator.CPU;
                 lblsCPU[i].Left = 2 * DIMENSIUNE_PAS_X;
                 lblsCPU[i].Top = (i + 1) * DIMENSIUNE_PAS_Y;
                 this.Controls.Add(lblsCPU[i]);
 
-                //lblsProducatorGPU[i] = new Label();
+                //lblsProducatorGPU[i] = new MetroLabel();
                 //lblsProducatorGPU[i].Width = LATIME_CONTROL;
                 //lblsProducatorGPU[i].Text = calculator.producatorGPU.ToString();
                 //lblsProducatorGPU[i].Left = 4 * DIMENSIUNE_PAS_X;
                 //lblsProducatorGPU[i].Top = (i + 1) * DIMENSIUNE_PAS_Y;
                 //this.Controls.Add(lblsProducatorGPU[i]);
 
-                lblsGPU[i] = new Label();
+                lblsGPU[i] = new MetroLabel();
                 lblsGPU[i].Width = LATIME_CONTROL;
                 lblsGPU[i].Text = calculator.GPU;
                 lblsGPU[i].Left = 3 * DIMENSIUNE_PAS_X;
                 lblsGPU[i].Top = (i + 1) * DIMENSIUNE_PAS_Y;
                 this.Controls.Add(lblsGPU[i]);
 
-                lblsCapacitateRAM[i] = new Label();
+                lblsCapacitateRAM[i] = new MetroLabel();
                 lblsCapacitateRAM[i].Width = LATIME_CONTROL;
                 lblsCapacitateRAM[i].Text = calculator.capacitateRAM.ToString();
                 lblsCapacitateRAM[i].Left = 4 * DIMENSIUNE_PAS_X;
                 lblsCapacitateRAM[i].Top = (i + 1) * DIMENSIUNE_PAS_Y;
                 this.Controls.Add(lblsCapacitateRAM[i]);
 
-                //lblsCapacitateStocare[i] = new Label();
+                //lblsCapacitateStocare[i] = new MetroLabel();
                 //lblsCapacitateStocare[i].Width = LATIME_CONTROL;
                 //lblsCapacitateStocare[i].Text = calculator.capacitateStocare.ToString();
                 //lblsCapacitateStocare[i].Left = 7 * DIMENSIUNE_PAS_X;
                 //lblsCapacitateStocare[i].Top = (i + 1) * DIMENSIUNE_PAS_Y;
                 //this.Controls.Add(lblsCapacitateStocare[i]);
 
-                //lblsCarcasa[i] = new Label();
+                //lblsCarcasa[i] = new MetroLabel();
                 //lblsCarcasa[i].Width = LATIME_CONTROL;
                 //lblsCarcasa[i].Text = calculator.carcasa;
                 //lblsCarcasa[i].Left = 8 * DIMENSIUNE_PAS_X;
                 //lblsCarcasa[i].Top = (i + 1) * DIMENSIUNE_PAS_Y;
                 //this.Controls.Add(lblsCarcasa[i]);
 
-                //lblsFrontPanel[i] = new Label();
+                //lblsFrontPanel[i] = new MetroLabel();
                 //lblsFrontPanel[i].Width = LATIME_CONTROL;
                 //lblsFrontPanel[i].Text = calculator.frontPanel.ToString();
                 //lblsFrontPanel[i].Left = 9 * DIMENSIUNE_PAS_X;
                 //lblsFrontPanel[i].Top = (i + 1) * DIMENSIUNE_PAS_Y;
                 //this.Controls.Add(lblsFrontPanel[i]);
 
-                //lblsSursa[i] = new Label();
+                //lblsSursa[i] = new MetroLabel();
                 //lblsSursa[i].Width = LATIME_CONTROL;
                 //lblsSursa[i].Text = calculator.sursa.ToString();
                 //lblsSursa[i].Left = 10 * DIMENSIUNE_PAS_X;
@@ -309,29 +313,29 @@ namespace ComponenteProiect
                 i++;
             }
     }
-        private bool validareTextBoxString(TextBox textBox)
+        private bool validareMetroTextBoxString(MetroTextBox MetroTextBox)
         {
-            if (textBox.Text == "")
+            if (MetroTextBox.Text == "")
             {
                 return false;
             }
-            if (textBox.Text.Length < 3)
+            if (MetroTextBox.Text.Length < 3)
             {
                 return false;
             }
-            if (textBox.Text.Length > 20)
+            if (MetroTextBox.Text.Length > 20)
             {
                 return false;
             }
             return true;
         }
-        private bool validareTextBoxInt(TextBox textBox)
+        private bool validareMetroTextBoxInt(MetroTextBox MetroTextBox)
         {
-            if (textBox.Text == "")
+            if (MetroTextBox.Text == "")
             {
                 return false;
             }
-            if (!int.TryParse(textBox.Text, out int result))
+            if (!int.TryParse(MetroTextBox.Text, out int result))
             {
                 return false;
             }
@@ -399,7 +403,7 @@ namespace ComponenteProiect
         //Calculatoare
         private void Denumire_TextChanged(object sender, EventArgs e)
         {
-            if (!validareTextBoxString(Denumire))
+            if (!validareMetroTextBoxString(Denumire))
             {
                 lBoxDenumire.ForeColor = Color.Red;
             }
@@ -411,7 +415,7 @@ namespace ComponenteProiect
 
         private void Producator_TextChanged(object sender, EventArgs e)
         {
-            if (!validareTextBoxString(Producator))
+            if (!validareMetroTextBoxString(Producator))
             {
                 lBoxProducator.ForeColor = Color.Red;
             }
@@ -423,7 +427,7 @@ namespace ComponenteProiect
 
         private void CPU_TextChanged(object sender, EventArgs e)
         {
-            if (!validareTextBoxString(CPU))
+            if (!validareMetroTextBoxString(CPU))
             {
                 lBoxCPU.ForeColor = Color.Red;
             }
@@ -435,7 +439,7 @@ namespace ComponenteProiect
 
         private void Producator_GPU_TextChanged(object sender, EventArgs e)
         {
-            if (!validareTextBoxString(Producator_GPU))
+            if (!validareMetroTextBoxString(Producator_GPU))
             {
                 lBoxProducator_GPU.ForeColor = Color.Red;
             }
@@ -447,7 +451,7 @@ namespace ComponenteProiect
 
         private void GPU_TextChanged(object sender, EventArgs e)
         {
-            if (!validareTextBoxString(GPU))
+            if (!validareMetroTextBoxString(GPU))
             {
                 lBoxGPU.ForeColor = Color.Red;
             }
@@ -459,7 +463,7 @@ namespace ComponenteProiect
 
         private void RAM_TextChanged(object sender, EventArgs e)
         {
-            if (!validareTextBoxInt(RAM))
+            if (!validareMetroTextBoxInt(RAM))
             {
                 lBoxRAM.ForeColor = Color.Red;
             }
@@ -471,7 +475,7 @@ namespace ComponenteProiect
 
         private void Stocare_TextChanged(object sender, EventArgs e)
         {
-            if (!validareTextBoxInt(Stocare))
+            if (!validareMetroTextBoxInt(Stocare))
             {
                 lBoxStocare.ForeColor = Color.Red;
             }
@@ -483,7 +487,7 @@ namespace ComponenteProiect
 
         private void Carcasa_TextChanged(object sender, EventArgs e)
         {
-            if (!validareTextBoxString(Carcasa))
+            if (!validareMetroTextBoxString(Carcasa))
             {
                 lBoxCarcasa.ForeColor = Color.Red;
             }
@@ -495,7 +499,7 @@ namespace ComponenteProiect
 
         private void Front_Panel_TextChanged(object sender, EventArgs e)
         {
-            if (!validareTextBoxString(Front_Panel))
+            if (!validareMetroTextBoxString(Front_Panel))
             {
                 lBoxFront_Panel.ForeColor = Color.Red;
             }
@@ -507,7 +511,7 @@ namespace ComponenteProiect
 
         private void Sursa_TextChanged(object sender, EventArgs e)
         {
-            if (!validareTextBoxInt(Sursa))
+            if (!validareMetroTextBoxInt(Sursa))
             {
                 lBoxSursa.ForeColor = Color.Red;
             }
@@ -522,7 +526,7 @@ namespace ComponenteProiect
         //Useri
         private void Nume_TextChanged(object sender, EventArgs e)
         {
-            if (!validareTextBoxString(Nume))
+            if (!validareMetroTextBoxString(Nume))
             {
                 lBoxNume.ForeColor = Color.Red;
             }
@@ -534,7 +538,7 @@ namespace ComponenteProiect
 
         private void Prenume_TextChanged(object sender, EventArgs e)
         {
-            if (!validareTextBoxString(Prenume))
+            if (!validareMetroTextBoxString(Prenume))
             {
                 lBoxPrenume.ForeColor = Color.Red;
             }
@@ -546,7 +550,7 @@ namespace ComponenteProiect
 
         private void Gen_TextChanged(object sender, EventArgs e)
         {
-            if (!validareTextBoxInt(Gen))
+            if (!validareMetroTextBoxInt(Gen))
             {
                 lBoxGen.ForeColor = Color.Red;
             }
@@ -558,7 +562,7 @@ namespace ComponenteProiect
 
         private void Email_TextChanged(object sender, EventArgs e)
         {
-            if (!validareTextBoxString(Email))
+            if (!validareMetroTextBoxString(Email))
             {
                 lBoxEmail.ForeColor = Color.Red;
             }
@@ -570,7 +574,7 @@ namespace ComponenteProiect
 
         private void Adresa_TextChanged(object sender, EventArgs e)
         {
-            if (!validareTextBoxString(Adresa))
+            if (!validareMetroTextBoxString(Adresa))
             {
                 lBoxAdresa.ForeColor = Color.Red;
             }
@@ -582,7 +586,7 @@ namespace ComponenteProiect
 
         private void Telefon_TextChanged(object sender, EventArgs e)
         {
-            if (!validareTextBoxString(Telefon))
+            if (!validareMetroTextBoxString(Telefon))
             {
                 lBoxTelefon.ForeColor = Color.Red;
             }
@@ -590,6 +594,26 @@ namespace ComponenteProiect
             {
                 lBoxTelefon.ForeColor = Color.Black;
             }
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Nume_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Producator_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
