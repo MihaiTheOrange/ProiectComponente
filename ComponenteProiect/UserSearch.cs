@@ -34,7 +34,7 @@ namespace ComponenteProiect
 
         private void SearchButton_Click(object sender, EventArgs e)
         {
-            string locatieFisierUseri = "C:\\Users\\Mihai\\source\\repos\\ProiectComponente\\ProiectComponente\\bin\\Debug\\Useri.txt";
+            string locatieFisierUseri = StorageFactory.getNumFisUser();
             AdministrareUser_FIsierText admin = new AdministrareUser_FIsierText(locatieFisierUseri);
             User userGasit = admin.CautaUserNume(numeTextbox.Text, prenumeTextbox.Text);
             if (userGasit != null)

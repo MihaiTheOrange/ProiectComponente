@@ -17,6 +17,9 @@ namespace ComponenteProiect
     public partial class MainMenu: MetroForm
     {
         MainMenuControl mainMenuControl = new MainMenuControl();
+        UserAdminControl userAdminControl = new UserAdminControl(); 
+        CalculatoareAdminControl calculatoareAdminControl = new CalculatoareAdminControl();
+        string activeGrid = "main";
         public MainMenu()
         {
             InitializeComponent();
@@ -79,9 +82,12 @@ namespace ComponenteProiect
 
         private void metroTile2_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            Form1 form1 = new Form1();
-            form1.Show();
+            //this.Hide();
+            //Form1 form1 = new Form1();
+            //form1.Show();
+            mainPanel.Controls.Clear();
+            mainPanel.Controls.Add(calculatoareAdminControl);
+            activeGrid = "calculatoare";
         }
 
         private void MainMenu_Load(object sender, EventArgs e)
@@ -91,9 +97,12 @@ namespace ComponenteProiect
 
         private void Useri_Comenzi_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            UsersForm userForm = new UsersForm(this);
-            userForm.Show();
+            //this.Hide();
+            //UsersForm userForm = new UsersForm(this);
+            //userForm.Show();
+            mainPanel.Controls.Clear();
+            mainPanel.Controls.Add(userAdminControl);
+            activeGrid = "useri";
         }
 
         private void metroLabel2_Click(object sender, EventArgs e)
@@ -116,6 +125,7 @@ namespace ComponenteProiect
         {
             mainPanel.Controls.Clear();
             mainPanel.Controls.Add(mainMenuControl);
+            activeGrid = "main";
 
         }
 
@@ -138,6 +148,27 @@ namespace ComponenteProiect
         private void calculatoareLabel_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void metroGrid1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void Refresh_Click(object sender, EventArgs e)
+        {
+            if (activeGrid == "calculatoare")
+            {
+                calculatoareAdminControl.refreshGrid();
+            }
+            else if (activeGrid == "useri")
+            {
+                userAdminControl.refreshGrid();
+            }
+            else if (activeGrid == "main")
+            {
+                mainMenuControl.refreshGrids();
+            }
         }
     }
 }

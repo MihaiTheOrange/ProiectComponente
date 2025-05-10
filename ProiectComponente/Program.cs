@@ -73,7 +73,7 @@ namespace ProiectComponente
             Console.WriteLine(ex2.conversieLaSir_PentruFisier());
             adminFisierCalculatoare.AddCalculator(ex1, ref nrCalculatoare);
             adminFisierCalculatoare.AddCalculator(ex3, ref nrCalculatoare);
-            Calculator[] calculatoare = adminFisierCalculatoare.GetCalculatoare(out nrCalculatoare);
+            List<Calculator> calculatoare = adminFisierCalculatoare.GetCalculatoare(out nrCalculatoare);
 
             Console.WriteLine("==== afisare lista calculatoare"); //afisare lista calculatoare
 
@@ -87,7 +87,7 @@ namespace ProiectComponente
            
             Console.WriteLine(ex.to_str());
             Console.WriteLine("TEST");
-            User[] useri = adminFisierUseri.GetUseri(out nrUseri);
+            List<User> useri = adminFisierUseri.GetUseri(out nrUseri);
             afisareUseri(useri, nrUseri);
 
 
@@ -110,7 +110,7 @@ namespace ProiectComponente
         }
 
 
-        public static void afisareCalculatoare(Calculator[] calculatoare, int nrCalculatoare)
+        public static void afisareCalculatoare(List<Calculator> calculatoare, int nrCalculatoare)
         {
             for (int i = 0; i < nrCalculatoare; i++)
             {
@@ -118,7 +118,7 @@ namespace ProiectComponente
             }
         }
 
-        public static void afisareUseri(User[] useri, int nrUseri)
+        public static void afisareUseri(List<User> useri, int nrUseri)
         {
             for (int i = 0; i < nrUseri; i++)
             {

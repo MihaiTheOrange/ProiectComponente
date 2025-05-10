@@ -11,14 +11,19 @@ using System.Windows.Forms;
 using MetroFramework.Forms;
 using MetroFramework.Controls;
 using LibrarieModele;
+using NivelStocareDate;
 
 namespace ComponenteProiect
 {
     public partial class AddUserForm: MetroForm
     {
+        AdministrareUser_FIsierText adminUser;
+        int nrUseri = 0;
         public AddUserForm()
         {
             InitializeComponent();
+            adminUser = new AdministrareUser_FIsierText(StorageFactory.getNumFisUser());
+            adminUser.GetUseri(out nrUseri);
         }
 
         private void AddUserForm_Load(object sender, EventArgs e)
@@ -95,6 +100,8 @@ namespace ComponenteProiect
                     gen = 3;
                 }
                 userNou = new User(nume, prenume, gen, email, adresa, nrTelefon);
+                adminUser.AddUser(userNou, ref nrUseri);
+                MessageBox.Show("User adaugat cu succes");
             }
             catch (Exception)
             {

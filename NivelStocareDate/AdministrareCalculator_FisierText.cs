@@ -26,9 +26,9 @@ namespace NivelStocareDate
                 swFisierText.WriteLine(c.conversieLaSir_PentruFisier()); 
         }
 
-        public Calculator[] GetCalculatoare(out int nrCalculatoare)
+        public List<Calculator> GetCalculatoare(out int nrCalculatoare)
         {
-            Calculator[] calculatoare = new Calculator[NR_MAXIM_CALCULATOARE];
+            List<Calculator> calculatoare = new List<Calculator>();
             nrCalculatoare = 0;
                 using (StreamReader sr = new StreamReader(numeFisier))
                 {
@@ -36,11 +36,11 @@ namespace NivelStocareDate
                     while ((line = sr.ReadLine()) != null)
                     {
                     //Console.WriteLine(line);
-                    calculatoare[nrCalculatoare++] = new Calculator(line);
-                        
+                    calculatoare.Add(new Calculator(line));
+
                     }
                 }
-            
+            nrCalculatoare = calculatoare.Count;
             return calculatoare;
         }
 

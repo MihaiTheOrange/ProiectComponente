@@ -28,20 +28,24 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainMenu));
             this.sideBarPanel = new MetroFramework.Controls.MetroPanel();
             this.metroPanel2 = new MetroFramework.Controls.MetroPanel();
+            this.Admin_Calculatoare = new MetroFramework.Controls.MetroTile();
             this.metroPanel1 = new MetroFramework.Controls.MetroPanel();
+            this.Useri_Comenzi = new MetroFramework.Controls.MetroTile();
             this.MainMenuPanel = new MetroFramework.Controls.MetroPanel();
+            this.MainMenuTile = new MetroFramework.Controls.MetroTile();
             this.meniuriLabel = new MetroFramework.Controls.MetroLabel();
             this.mainPanel = new MetroFramework.Controls.MetroPanel();
             this.dashboardLabel = new MetroFramework.Controls.MetroLabel();
-            this.Admin_Calculatoare = new MetroFramework.Controls.MetroTile();
-            this.Useri_Comenzi = new MetroFramework.Controls.MetroTile();
-            this.MainMenuTile = new MetroFramework.Controls.MetroTile();
+            this.Refresh = new MetroFramework.Controls.MetroTile();
+            this.metroPanel3 = new MetroFramework.Controls.MetroPanel();
             this.sideBarPanel.SuspendLayout();
             this.metroPanel2.SuspendLayout();
             this.metroPanel1.SuspendLayout();
             this.MainMenuPanel.SuspendLayout();
+            this.metroPanel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // sideBarPanel
@@ -84,6 +88,30 @@
             this.metroPanel2.VerticalScrollbarHighlightOnWheel = false;
             this.metroPanel2.VerticalScrollbarSize = 10;
             // 
+            // Admin_Calculatoare
+            // 
+            this.Admin_Calculatoare.ActiveControl = null;
+            this.Admin_Calculatoare.BackColor = System.Drawing.Color.MediumSeaGreen;
+            this.Admin_Calculatoare.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Admin_Calculatoare.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.Admin_Calculatoare.Location = new System.Drawing.Point(-2, -4);
+            this.Admin_Calculatoare.Margin = new System.Windows.Forms.Padding(2);
+            this.Admin_Calculatoare.Name = "Admin_Calculatoare";
+            this.Admin_Calculatoare.Size = new System.Drawing.Size(224, 40);
+            this.Admin_Calculatoare.TabIndex = 1;
+            this.Admin_Calculatoare.TabStop = false;
+            this.Admin_Calculatoare.Text = "Administare Calculatoare";
+            this.Admin_Calculatoare.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.Admin_Calculatoare.TileImage = global::ComponenteProiect.Properties.Resources.gaming_pc__1_;
+            this.Admin_Calculatoare.TileImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Admin_Calculatoare.TileTextFontSize = MetroFramework.MetroTileTextSize.Small;
+            this.Admin_Calculatoare.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Regular;
+            this.Admin_Calculatoare.UseCustomBackColor = true;
+            this.Admin_Calculatoare.UseCustomForeColor = true;
+            this.Admin_Calculatoare.UseSelectable = true;
+            this.Admin_Calculatoare.UseTileImage = true;
+            this.Admin_Calculatoare.Click += new System.EventHandler(this.metroTile2_Click);
+            // 
             // metroPanel1
             // 
             this.metroPanel1.BackColor = System.Drawing.Color.MediumSeaGreen;
@@ -100,6 +128,30 @@
             this.metroPanel1.VerticalScrollbarHighlightOnWheel = false;
             this.metroPanel1.VerticalScrollbarSize = 10;
             // 
+            // Useri_Comenzi
+            // 
+            this.Useri_Comenzi.ActiveControl = null;
+            this.Useri_Comenzi.BackColor = System.Drawing.Color.MediumSeaGreen;
+            this.Useri_Comenzi.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Useri_Comenzi.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.Useri_Comenzi.Location = new System.Drawing.Point(-2, -4);
+            this.Useri_Comenzi.Margin = new System.Windows.Forms.Padding(2);
+            this.Useri_Comenzi.Name = "Useri_Comenzi";
+            this.Useri_Comenzi.Size = new System.Drawing.Size(224, 40);
+            this.Useri_Comenzi.TabIndex = 2;
+            this.Useri_Comenzi.TabStop = false;
+            this.Useri_Comenzi.Text = "Utilizatori si Comenzi";
+            this.Useri_Comenzi.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.Useri_Comenzi.TileImage = global::ComponenteProiect.Properties.Resources.user1;
+            this.Useri_Comenzi.TileImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Useri_Comenzi.TileTextFontSize = MetroFramework.MetroTileTextSize.Small;
+            this.Useri_Comenzi.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Regular;
+            this.Useri_Comenzi.UseCustomBackColor = true;
+            this.Useri_Comenzi.UseCustomForeColor = true;
+            this.Useri_Comenzi.UseSelectable = true;
+            this.Useri_Comenzi.UseTileImage = true;
+            this.Useri_Comenzi.Click += new System.EventHandler(this.Useri_Comenzi_Click);
+            // 
             // MainMenuPanel
             // 
             this.MainMenuPanel.BackColor = System.Drawing.Color.MediumSeaGreen;
@@ -115,6 +167,34 @@
             this.MainMenuPanel.VerticalScrollbarBarColor = true;
             this.MainMenuPanel.VerticalScrollbarHighlightOnWheel = false;
             this.MainMenuPanel.VerticalScrollbarSize = 10;
+            // 
+            // MainMenuTile
+            // 
+            this.MainMenuTile.ActiveControl = null;
+            this.MainMenuTile.BackColor = System.Drawing.Color.MediumSeaGreen;
+            this.MainMenuTile.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.MainMenuTile.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.MainMenuTile.Location = new System.Drawing.Point(-2, -3);
+            this.MainMenuTile.Margin = new System.Windows.Forms.Padding(2);
+            this.MainMenuTile.Name = "MainMenuTile";
+            this.MainMenuTile.Size = new System.Drawing.Size(225, 40);
+            this.MainMenuTile.TabIndex = 3;
+            this.MainMenuTile.TabStop = false;
+            this.MainMenuTile.Text = "Meniu Principal";
+            this.MainMenuTile.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.MainMenuTile.TileImage = global::ComponenteProiect.Properties.Resources.blackMenu;
+            this.MainMenuTile.TileImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.MainMenuTile.TileTextFontSize = MetroFramework.MetroTileTextSize.Small;
+            this.MainMenuTile.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Regular;
+            this.MainMenuTile.UseCustomBackColor = true;
+            this.MainMenuTile.UseCustomForeColor = true;
+            this.MainMenuTile.UseSelectable = true;
+            this.MainMenuTile.UseTileImage = true;
+            this.MainMenuTile.Click += new System.EventHandler(this.MainMenuTile_Click);
+            this.MainMenuTile.Enter += new System.EventHandler(this.MainMenuTile_Enter);
+            this.MainMenuTile.MouseEnter += new System.EventHandler(this.MainMenuTile_MouseEnter);
+            this.MainMenuTile.MouseLeave += new System.EventHandler(this.MainMenuTile_MouseLeave);
+            this.MainMenuTile.MouseHover += new System.EventHandler(this.MainMenuTile_MouseHover);
             // 
             // meniuriLabel
             // 
@@ -161,87 +241,45 @@
             this.dashboardLabel.UseCustomBackColor = true;
             this.dashboardLabel.WrapToLine = true;
             // 
-            // Admin_Calculatoare
+            // Refresh
             // 
-            this.Admin_Calculatoare.ActiveControl = null;
-            this.Admin_Calculatoare.BackColor = System.Drawing.Color.MediumSeaGreen;
-            this.Admin_Calculatoare.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Admin_Calculatoare.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.Admin_Calculatoare.Location = new System.Drawing.Point(-2, -4);
-            this.Admin_Calculatoare.Margin = new System.Windows.Forms.Padding(2);
-            this.Admin_Calculatoare.Name = "Admin_Calculatoare";
-            this.Admin_Calculatoare.Size = new System.Drawing.Size(224, 40);
-            this.Admin_Calculatoare.TabIndex = 1;
-            this.Admin_Calculatoare.TabStop = false;
-            this.Admin_Calculatoare.Text = "Administare Calculatoare";
-            this.Admin_Calculatoare.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.Admin_Calculatoare.TileImage = global::ComponenteProiect.Properties.Resources.gaming_pc__1_;
-            this.Admin_Calculatoare.TileImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Admin_Calculatoare.TileTextFontSize = MetroFramework.MetroTileTextSize.Small;
-            this.Admin_Calculatoare.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Regular;
-            this.Admin_Calculatoare.UseCustomBackColor = true;
-            this.Admin_Calculatoare.UseCustomForeColor = true;
-            this.Admin_Calculatoare.UseSelectable = true;
-            this.Admin_Calculatoare.UseTileImage = true;
-            this.Admin_Calculatoare.Click += new System.EventHandler(this.metroTile2_Click);
+            this.Refresh.ActiveControl = null;
+            this.Refresh.BackColor = System.Drawing.Color.Transparent;
+            this.Refresh.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.Refresh.Location = new System.Drawing.Point(-38, -5);
+            this.Refresh.Margin = new System.Windows.Forms.Padding(2);
+            this.Refresh.Name = "Refresh";
+            this.Refresh.Size = new System.Drawing.Size(112, 60);
+            this.Refresh.TabIndex = 6;
+            this.Refresh.TileImage = ((System.Drawing.Image)(resources.GetObject("Refresh.TileImage")));
+            this.Refresh.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.Refresh.UseCustomBackColor = true;
+            this.Refresh.UseCustomForeColor = true;
+            this.Refresh.UseSelectable = true;
+            this.Refresh.UseTileImage = true;
+            this.Refresh.Click += new System.EventHandler(this.Refresh_Click);
             // 
-            // Useri_Comenzi
+            // metroPanel3
             // 
-            this.Useri_Comenzi.ActiveControl = null;
-            this.Useri_Comenzi.BackColor = System.Drawing.Color.MediumSeaGreen;
-            this.Useri_Comenzi.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Useri_Comenzi.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.Useri_Comenzi.Location = new System.Drawing.Point(-2, -4);
-            this.Useri_Comenzi.Margin = new System.Windows.Forms.Padding(2);
-            this.Useri_Comenzi.Name = "Useri_Comenzi";
-            this.Useri_Comenzi.Size = new System.Drawing.Size(224, 40);
-            this.Useri_Comenzi.TabIndex = 2;
-            this.Useri_Comenzi.TabStop = false;
-            this.Useri_Comenzi.Text = "Utilizatori si Comenzi";
-            this.Useri_Comenzi.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.Useri_Comenzi.TileImage = global::ComponenteProiect.Properties.Resources.user1;
-            this.Useri_Comenzi.TileImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Useri_Comenzi.TileTextFontSize = MetroFramework.MetroTileTextSize.Small;
-            this.Useri_Comenzi.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Regular;
-            this.Useri_Comenzi.UseCustomBackColor = true;
-            this.Useri_Comenzi.UseCustomForeColor = true;
-            this.Useri_Comenzi.UseSelectable = true;
-            this.Useri_Comenzi.UseTileImage = true;
-            this.Useri_Comenzi.Click += new System.EventHandler(this.Useri_Comenzi_Click);
-            // 
-            // MainMenuTile
-            // 
-            this.MainMenuTile.ActiveControl = null;
-            this.MainMenuTile.BackColor = System.Drawing.Color.MediumSeaGreen;
-            this.MainMenuTile.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.MainMenuTile.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.MainMenuTile.Location = new System.Drawing.Point(-2, -3);
-            this.MainMenuTile.Margin = new System.Windows.Forms.Padding(2);
-            this.MainMenuTile.Name = "MainMenuTile";
-            this.MainMenuTile.Size = new System.Drawing.Size(225, 40);
-            this.MainMenuTile.TabIndex = 3;
-            this.MainMenuTile.TabStop = false;
-            this.MainMenuTile.Text = "Meniu Principal";
-            this.MainMenuTile.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.MainMenuTile.TileImage = global::ComponenteProiect.Properties.Resources.blackMenu;
-            this.MainMenuTile.TileImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.MainMenuTile.TileTextFontSize = MetroFramework.MetroTileTextSize.Small;
-            this.MainMenuTile.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Regular;
-            this.MainMenuTile.UseCustomBackColor = true;
-            this.MainMenuTile.UseCustomForeColor = true;
-            this.MainMenuTile.UseSelectable = true;
-            this.MainMenuTile.UseTileImage = true;
-            this.MainMenuTile.Click += new System.EventHandler(this.MainMenuTile_Click);
-            this.MainMenuTile.Enter += new System.EventHandler(this.MainMenuTile_Enter);
-            this.MainMenuTile.MouseEnter += new System.EventHandler(this.MainMenuTile_MouseEnter);
-            this.MainMenuTile.MouseLeave += new System.EventHandler(this.MainMenuTile_MouseLeave);
-            this.MainMenuTile.MouseHover += new System.EventHandler(this.MainMenuTile_MouseHover);
+            this.metroPanel3.Controls.Add(this.Refresh);
+            this.metroPanel3.HorizontalScrollbarBarColor = true;
+            this.metroPanel3.HorizontalScrollbarHighlightOnWheel = false;
+            this.metroPanel3.HorizontalScrollbarSize = 8;
+            this.metroPanel3.Location = new System.Drawing.Point(720, 7);
+            this.metroPanel3.Margin = new System.Windows.Forms.Padding(2);
+            this.metroPanel3.Name = "metroPanel3";
+            this.metroPanel3.Size = new System.Drawing.Size(47, 40);
+            this.metroPanel3.TabIndex = 2;
+            this.metroPanel3.VerticalScrollbarBarColor = true;
+            this.metroPanel3.VerticalScrollbarHighlightOnWheel = false;
+            this.metroPanel3.VerticalScrollbarSize = 8;
             // 
             // MainMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(861, 434);
+            this.Controls.Add(this.metroPanel3);
             this.Controls.Add(this.dashboardLabel);
             this.Controls.Add(this.mainPanel);
             this.Controls.Add(this.sideBarPanel);
@@ -257,6 +295,7 @@
             this.metroPanel2.ResumeLayout(false);
             this.metroPanel1.ResumeLayout(false);
             this.MainMenuPanel.ResumeLayout(false);
+            this.metroPanel3.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -273,5 +312,7 @@
         private MetroFramework.Controls.MetroPanel metroPanel2;
         private MetroFramework.Controls.MetroPanel mainPanel;
         private MetroFramework.Controls.MetroLabel dashboardLabel;
+        private MetroFramework.Controls.MetroTile Refresh;
+        private MetroFramework.Controls.MetroPanel metroPanel3;
     }
 }

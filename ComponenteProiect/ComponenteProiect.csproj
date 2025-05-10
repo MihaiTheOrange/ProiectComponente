@@ -55,11 +55,29 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddCalculatorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddCalculatorForm.Designer.cs">
+      <DependentUpon>AddCalculatorForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="AddUserForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="AddUserForm.Designer.cs">
       <DependentUpon>AddUserForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CalculatoareAdminControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CalculatoareAdminControl.Designer.cs">
+      <DependentUpon>CalculatoareAdminControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CalculatoareSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CalculatoareSearch.Designer.cs">
+      <DependentUpon>CalculatoareSearch.cs</DependentUpon>
     </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -86,6 +104,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="StorageFactory.cs" />
     <Compile Include="UserAdminControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -104,8 +123,17 @@
     <Compile Include="UsersForm.Designer.cs">
       <DependentUpon>UsersForm.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="AddCalculatorForm.resx">
+      <DependentUpon>AddCalculatorForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AddUserForm.resx">
       <DependentUpon>AddUserForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CalculatoareAdminControl.resx">
+      <DependentUpon>CalculatoareAdminControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CalculatoareSearch.resx">
+      <DependentUpon>CalculatoareSearch.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>

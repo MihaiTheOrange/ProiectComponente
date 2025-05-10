@@ -28,18 +28,20 @@ namespace NivelStocareDate
                 swFisierText.WriteLine(u.conversieLaSir_PentruFisier());
         }
 
-        public User[] GetUseri(out int nrUseri)
+        public List<User> GetUseri(out int nrUseri)
         {
-            User[] useri = new User[NR_MAXIM_USERI];
-            nrUseri = 0;
+            List<User> useri = new List<User>();
+
             using (StreamReader sr = new StreamReader(numeFisier))
             {
                 string line;
                 while ((line = sr.ReadLine()) != null)
                 {
-                    useri[nrUseri++] = new User(line);
+                    useri.Add(new User(line));
                 }
             }
+            nrUseri = useri.Count;
+
             return useri;
         }
 

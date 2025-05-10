@@ -68,11 +68,11 @@ namespace ComponenteProiect
             InitializeComponent();
             adminCalc = new AdministrareCalculator_FisierText(locatieFisierCalculatoare);
             int nrCalculatoare = 0;
-            Calculator[] calculatoare = adminCalc.GetCalculatoare(out nrCalculatoare);
+            List<Calculator> calculatoare = adminCalc.GetCalculatoare(out nrCalculatoare);
 
             adminUser = new AdministrareUser_FIsierText(locatieFisierUseri);
             int nrUseri = 0;
-            User[] useri = adminUser.GetUseri(out nrUseri);
+            List<User> useri = adminUser.GetUseri(out nrUseri);
 
 
             //Setare proprietati
@@ -188,17 +188,16 @@ namespace ComponenteProiect
 
         private void testMetroLabel(MetroLabel test)
         {
-            Calculator[] calculatoare = adminCalc.GetCalculatoare(out int nrCalculatoare);
+            List<Calculator> calculatoare = adminCalc.GetCalculatoare(out int nrCalculatoare);
             test.Width = LATIME_CONTROL;
-            test.Text = calculatoare.Length.ToString();
+            test.Text = calculatoare.Count.ToString();
             test.Top = DIMENSIUNE_PAS_Y;
             this.Controls.Add(test);
         }
 
         private void AfisareUseri()
         {
-            User[] useri = adminUser.GetUseri(out int nrUseri);
-            Array.Resize(ref useri, nrUseri);
+            List<User> useri = adminUser.GetUseri(out int nrUseri);
             lblsNume = new MetroLabel[nrUseri];
             lblsPrenume = new MetroLabel[nrUseri];
             int i = 0;
@@ -222,8 +221,8 @@ namespace ComponenteProiect
 
         private void AfisareCalculatoare()
         {
-            Calculator[] calculatoare = adminCalc.GetCalculatoare(out int nrCalculatoare);
-            Array.Resize(ref calculatoare, nrCalculatoare);
+            List<Calculator> calculatoare = adminCalc.GetCalculatoare(out int nrCalculatoare);
+            
             lblsDenumire = new MetroLabel[nrCalculatoare];
             lblsProducator = new MetroLabel[nrCalculatoare];
             lblsCPU = new MetroLabel[nrCalculatoare];
