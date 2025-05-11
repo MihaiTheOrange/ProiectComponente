@@ -39,7 +39,7 @@ namespace ComponenteProiect
             List<User> useri = adminUser.GetUseri(out nrUseri);
             AfisareUseriGrid(useri);
         }
-        private void AfisareUseriGrid(List<User> useri)
+        public void AfisareUseriGrid(List<User> useri)
         {
             UserAdminGrid.DataSource = useri.Select(u => new
             {
@@ -75,7 +75,7 @@ namespace ComponenteProiect
 
         private void SearchUser_Click(object sender, EventArgs e)
         {
-            UserSearch userSearch = new UserSearch();
+            UserSearch userSearch = new UserSearch(this);
             userSearch.ShowDialog();
         }
 

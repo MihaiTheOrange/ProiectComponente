@@ -26,6 +26,28 @@ namespace NivelStocareDate
                 swFisierText.WriteLine(c.conversieLaSir_PentruFisier()); 
         }
 
+        public void EditCalculator(Calculator calcNou)
+        {
+            int nrCalc = 0;
+            List<Calculator> calculatoare = this.GetCalculatoare(out nrCalc);
+
+            //rescrie tot fisierul
+            using (StreamWriter sw = new StreamWriter(numeFisier))
+            {
+                foreach (Calculator calc in calculatoare)
+                {
+                    if (calc.IdCalculator == calcNou.IdCalculator)
+                    {
+                        sw.WriteLine(calcNou.conversieLaSir_PentruFisier());
+                    }
+                    else
+                    {
+                        sw.WriteLine(calc.conversieLaSir_PentruFisier());
+                    }
+                }
+            }
+        }
+
         public List<Calculator> GetCalculatoare(out int nrCalculatoare)
         {
             List<Calculator> calculatoare = new List<Calculator>();

@@ -67,7 +67,8 @@
             this.CalculatoareGrid.EnableHeadersVisualStyles = false;
             this.CalculatoareGrid.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.CalculatoareGrid.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.CalculatoareGrid.Location = new System.Drawing.Point(3, 15);
+            this.CalculatoareGrid.Location = new System.Drawing.Point(4, 18);
+            this.CalculatoareGrid.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.CalculatoareGrid.Name = "CalculatoareGrid";
             this.CalculatoareGrid.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -81,7 +82,7 @@
             this.CalculatoareGrid.RowHeadersWidth = 51;
             this.CalculatoareGrid.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.CalculatoareGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.CalculatoareGrid.Size = new System.Drawing.Size(597, 156);
+            this.CalculatoareGrid.Size = new System.Drawing.Size(796, 192);
             this.CalculatoareGrid.TabIndex = 5;
             this.CalculatoareGrid.UseCustomBackColor = true;
             this.CalculatoareGrid.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.metroGrid1_CellContentClick);
@@ -113,7 +114,8 @@
             this.UsersGrid.EnableHeadersVisualStyles = false;
             this.UsersGrid.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.UsersGrid.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.UsersGrid.Location = new System.Drawing.Point(3, 187);
+            this.UsersGrid.Location = new System.Drawing.Point(4, 230);
+            this.UsersGrid.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.UsersGrid.Name = "UsersGrid";
             this.UsersGrid.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -127,7 +129,7 @@
             this.UsersGrid.RowHeadersWidth = 51;
             this.UsersGrid.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.UsersGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.UsersGrid.Size = new System.Drawing.Size(597, 156);
+            this.UsersGrid.Size = new System.Drawing.Size(796, 192);
             this.UsersGrid.Style = MetroFramework.MetroColorStyle.Silver;
             this.UsersGrid.TabIndex = 6;
             this.UsersGrid.UseCustomBackColor = true;
@@ -136,13 +138,14 @@
             // 
             // MainMenuControl
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.UsersGrid);
             this.Controls.Add(this.CalculatoareGrid);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "MainMenuControl";
-            this.Size = new System.Drawing.Size(620, 358);
+            this.Size = new System.Drawing.Size(827, 441);
             this.Load += new System.EventHandler(this.MainMenuControl_Load);
             ((System.ComponentModel.ISupportInitialize)(this.CalculatoareGrid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.UsersGrid)).EndInit();

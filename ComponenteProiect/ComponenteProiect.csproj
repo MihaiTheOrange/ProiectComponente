@@ -79,6 +79,12 @@
     <Compile Include="CalculatoareSearch.Designer.cs">
       <DependentUpon>CalculatoareSearch.cs</DependentUpon>
     </Compile>
+    <Compile Include="EditCalculatorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditCalculatorForm.Designer.cs">
+      <DependentUpon>EditCalculatorForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -134,6 +140,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CalculatoareSearch.resx">
       <DependentUpon>CalculatoareSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditCalculatorForm.resx">
+      <DependentUpon>EditCalculatorForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>

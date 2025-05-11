@@ -17,7 +17,7 @@ namespace ComponenteProiect
     {
         AdministrareCalculator_FisierText adminCalculatoare;
         private const string locatieFisierCalculatoare = "C:\\Users\\Mihai\\source\\repos\\ProiectComponente\\ProiectComponente\\bin\\Debug\\Calculatoare.txt";
-
+        List<Calculator> calculatoare;
         public CalculatoareAdminControl()
         {
             InitializeComponent();
@@ -36,12 +36,12 @@ namespace ComponenteProiect
 
             adminCalculatoare = new AdministrareCalculator_FisierText(locatieFisierCalculatoare);
             int nrCalculatoare = 0;
-            List<Calculator> calculatoare = adminCalculatoare.GetCalculatoare(out nrCalculatoare);
+            calculatoare = adminCalculatoare.GetCalculatoare(out nrCalculatoare);
             AfisareCalculatoareGrid(calculatoare);
 
         }
 
-        private void AfisareCalculatoareGrid(List<Calculator> calculatoare)
+        public void AfisareCalculatoareGrid(List<Calculator> calculatoare)
         {
             CalculatoareAdminGrid.DataSource = calculatoare.Select(c => new
             {
@@ -60,7 +60,7 @@ namespace ComponenteProiect
         public void refreshGrid()
         {
             int nrCalculatoare = 0;
-            List<Calculator> calculatoare = adminCalculatoare.GetCalculatoare(out nrCalculatoare);
+            calculatoare = adminCalculatoare.GetCalculatoare(out nrCalculatoare);
             AfisareCalculatoareGrid(calculatoare);
         }
 
@@ -74,14 +74,11 @@ namespace ComponenteProiect
 
         }
 
-        private void DeleteCalc_Click(object sender, EventArgs e)
-        {
-
-        }
+      
 
         private void SearchCalc_Click(object sender, EventArgs e)
         {
-            CalculatoareSearch searchCalculatorForm = new CalculatoareSearch();
+            CalculatoareSearch searchCalculatorForm = new CalculatoareSearch(this);
             searchCalculatorForm.ShowDialog();
         }
 
@@ -90,5 +87,23 @@ namespace ComponenteProiect
             AddCalculatorForm addCalculatorForm = new AddCalculatorForm();
             addCalculatorForm.ShowDialog();
         }
+
+        private void DeleteCalc_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void EditCalc_Click(object sender, EventArgs e)
+        {
+            int index = CalculatoareAdminGrid.CurrentRow?.Index ?? -1;
+            if (index>=0)
+            {
+                Calculator selectedCalc = calculatoare[index];
+                EditCalculatorForm editCalculatorForm = new EditCalculatorForm(selectedCalc);
+                editCalculatorForm.ShowDialog();
+            }
+            
+        }
     }
 }
+    

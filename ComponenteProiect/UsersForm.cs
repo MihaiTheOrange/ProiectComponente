@@ -47,8 +47,8 @@ namespace ComponenteProiect
 
         private void metroTile2_Click(object sender, EventArgs e)
         {
-            UserSearch userSearch = new UserSearch();
-            userSearch.ShowDialog();
+            //UserSearch userSearch = new UserSearch(this);
+            //userSearch.ShowDialog();
         }
     }
 }

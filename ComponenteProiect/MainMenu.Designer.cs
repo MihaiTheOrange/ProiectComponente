@@ -60,17 +60,18 @@
             this.sideBarPanel.ForeColor = System.Drawing.Color.MediumSeaGreen;
             this.sideBarPanel.HorizontalScrollbarBarColor = true;
             this.sideBarPanel.HorizontalScrollbarHighlightOnWheel = false;
-            this.sideBarPanel.HorizontalScrollbarSize = 8;
-            this.sideBarPanel.Location = new System.Drawing.Point(-2, 0);
-            this.sideBarPanel.Margin = new System.Windows.Forms.Padding(2);
+            this.sideBarPanel.HorizontalScrollbarSize = 10;
+            this.sideBarPanel.Location = new System.Drawing.Point(-3, 0);
+            this.sideBarPanel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.sideBarPanel.Name = "sideBarPanel";
-            this.sideBarPanel.Size = new System.Drawing.Size(234, 437);
+            this.sideBarPanel.Size = new System.Drawing.Size(312, 538);
             this.sideBarPanel.TabIndex = 3;
             this.sideBarPanel.UseCustomBackColor = true;
             this.sideBarPanel.UseCustomForeColor = true;
             this.sideBarPanel.VerticalScrollbarBarColor = true;
             this.sideBarPanel.VerticalScrollbarHighlightOnWheel = false;
-            this.sideBarPanel.VerticalScrollbarSize = 8;
+            this.sideBarPanel.VerticalScrollbarSize = 11;
+            this.sideBarPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.sideBarPanel_Paint);
             // 
             // metroPanel2
             // 
@@ -78,15 +79,16 @@
             this.metroPanel2.Controls.Add(this.Admin_Calculatoare);
             this.metroPanel2.HorizontalScrollbarBarColor = true;
             this.metroPanel2.HorizontalScrollbarHighlightOnWheel = false;
-            this.metroPanel2.HorizontalScrollbarSize = 10;
-            this.metroPanel2.Location = new System.Drawing.Point(7, 180);
+            this.metroPanel2.HorizontalScrollbarSize = 12;
+            this.metroPanel2.Location = new System.Drawing.Point(9, 222);
+            this.metroPanel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.metroPanel2.Name = "metroPanel2";
-            this.metroPanel2.Size = new System.Drawing.Size(206, 32);
+            this.metroPanel2.Size = new System.Drawing.Size(275, 39);
             this.metroPanel2.TabIndex = 7;
             this.metroPanel2.UseCustomBackColor = true;
             this.metroPanel2.VerticalScrollbarBarColor = true;
             this.metroPanel2.VerticalScrollbarHighlightOnWheel = false;
-            this.metroPanel2.VerticalScrollbarSize = 10;
+            this.metroPanel2.VerticalScrollbarSize = 13;
             // 
             // Admin_Calculatoare
             // 
@@ -94,10 +96,10 @@
             this.Admin_Calculatoare.BackColor = System.Drawing.Color.MediumSeaGreen;
             this.Admin_Calculatoare.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Admin_Calculatoare.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.Admin_Calculatoare.Location = new System.Drawing.Point(-2, -4);
-            this.Admin_Calculatoare.Margin = new System.Windows.Forms.Padding(2);
+            this.Admin_Calculatoare.Location = new System.Drawing.Point(-3, -5);
+            this.Admin_Calculatoare.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Admin_Calculatoare.Name = "Admin_Calculatoare";
-            this.Admin_Calculatoare.Size = new System.Drawing.Size(224, 40);
+            this.Admin_Calculatoare.Size = new System.Drawing.Size(299, 49);
             this.Admin_Calculatoare.TabIndex = 1;
             this.Admin_Calculatoare.TabStop = false;
             this.Admin_Calculatoare.Text = "Administare Calculatoare";
@@ -118,15 +120,16 @@
             this.metroPanel1.Controls.Add(this.Useri_Comenzi);
             this.metroPanel1.HorizontalScrollbarBarColor = true;
             this.metroPanel1.HorizontalScrollbarHighlightOnWheel = false;
-            this.metroPanel1.HorizontalScrollbarSize = 10;
-            this.metroPanel1.Location = new System.Drawing.Point(7, 119);
+            this.metroPanel1.HorizontalScrollbarSize = 12;
+            this.metroPanel1.Location = new System.Drawing.Point(9, 146);
+            this.metroPanel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.metroPanel1.Name = "metroPanel1";
-            this.metroPanel1.Size = new System.Drawing.Size(206, 32);
+            this.metroPanel1.Size = new System.Drawing.Size(275, 39);
             this.metroPanel1.TabIndex = 6;
             this.metroPanel1.UseCustomBackColor = true;
             this.metroPanel1.VerticalScrollbarBarColor = true;
             this.metroPanel1.VerticalScrollbarHighlightOnWheel = false;
-            this.metroPanel1.VerticalScrollbarSize = 10;
+            this.metroPanel1.VerticalScrollbarSize = 13;
             // 
             // Useri_Comenzi
             // 
@@ -134,10 +137,10 @@
             this.Useri_Comenzi.BackColor = System.Drawing.Color.MediumSeaGreen;
             this.Useri_Comenzi.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Useri_Comenzi.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.Useri_Comenzi.Location = new System.Drawing.Point(-2, -4);
-            this.Useri_Comenzi.Margin = new System.Windows.Forms.Padding(2);
+            this.Useri_Comenzi.Location = new System.Drawing.Point(-3, -5);
+            this.Useri_Comenzi.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Useri_Comenzi.Name = "Useri_Comenzi";
-            this.Useri_Comenzi.Size = new System.Drawing.Size(224, 40);
+            this.Useri_Comenzi.Size = new System.Drawing.Size(299, 49);
             this.Useri_Comenzi.TabIndex = 2;
             this.Useri_Comenzi.TabStop = false;
             this.Useri_Comenzi.Text = "Utilizatori si Comenzi";
@@ -158,15 +161,16 @@
             this.MainMenuPanel.Controls.Add(this.MainMenuTile);
             this.MainMenuPanel.HorizontalScrollbarBarColor = true;
             this.MainMenuPanel.HorizontalScrollbarHighlightOnWheel = false;
-            this.MainMenuPanel.HorizontalScrollbarSize = 10;
-            this.MainMenuPanel.Location = new System.Drawing.Point(7, 60);
+            this.MainMenuPanel.HorizontalScrollbarSize = 12;
+            this.MainMenuPanel.Location = new System.Drawing.Point(9, 74);
+            this.MainMenuPanel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.MainMenuPanel.Name = "MainMenuPanel";
-            this.MainMenuPanel.Size = new System.Drawing.Size(206, 32);
+            this.MainMenuPanel.Size = new System.Drawing.Size(275, 39);
             this.MainMenuPanel.TabIndex = 5;
             this.MainMenuPanel.UseCustomBackColor = true;
             this.MainMenuPanel.VerticalScrollbarBarColor = true;
             this.MainMenuPanel.VerticalScrollbarHighlightOnWheel = false;
-            this.MainMenuPanel.VerticalScrollbarSize = 10;
+            this.MainMenuPanel.VerticalScrollbarSize = 13;
             // 
             // MainMenuTile
             // 
@@ -174,10 +178,10 @@
             this.MainMenuTile.BackColor = System.Drawing.Color.MediumSeaGreen;
             this.MainMenuTile.Cursor = System.Windows.Forms.Cursors.Hand;
             this.MainMenuTile.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.MainMenuTile.Location = new System.Drawing.Point(-2, -3);
-            this.MainMenuTile.Margin = new System.Windows.Forms.Padding(2);
+            this.MainMenuTile.Location = new System.Drawing.Point(-3, -4);
+            this.MainMenuTile.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.MainMenuTile.Name = "MainMenuTile";
-            this.MainMenuTile.Size = new System.Drawing.Size(225, 40);
+            this.MainMenuTile.Size = new System.Drawing.Size(300, 49);
             this.MainMenuTile.TabIndex = 3;
             this.MainMenuTile.TabStop = false;
             this.MainMenuTile.Text = "Meniu Principal";
@@ -200,10 +204,9 @@
             // 
             this.meniuriLabel.FontSize = MetroFramework.MetroLabelSize.Tall;
             this.meniuriLabel.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.meniuriLabel.Location = new System.Drawing.Point(16, 17);
-            this.meniuriLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.meniuriLabel.Location = new System.Drawing.Point(21, 21);
             this.meniuriLabel.Name = "meniuriLabel";
-            this.meniuriLabel.Size = new System.Drawing.Size(154, 32);
+            this.meniuriLabel.Size = new System.Drawing.Size(205, 39);
             this.meniuriLabel.TabIndex = 2;
             this.meniuriLabel.Text = "Meniuri";
             this.meniuriLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -218,23 +221,23 @@
             this.mainPanel.BackColor = System.Drawing.Color.WhiteSmoke;
             this.mainPanel.HorizontalScrollbarBarColor = true;
             this.mainPanel.HorizontalScrollbarHighlightOnWheel = false;
-            this.mainPanel.HorizontalScrollbarSize = 10;
-            this.mainPanel.Location = new System.Drawing.Point(232, 52);
+            this.mainPanel.HorizontalScrollbarSize = 12;
+            this.mainPanel.Location = new System.Drawing.Point(309, 64);
+            this.mainPanel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.mainPanel.Name = "mainPanel";
-            this.mainPanel.Size = new System.Drawing.Size(623, 363);
+            this.mainPanel.Size = new System.Drawing.Size(831, 447);
             this.mainPanel.TabIndex = 4;
             this.mainPanel.VerticalScrollbarBarColor = true;
             this.mainPanel.VerticalScrollbarHighlightOnWheel = false;
-            this.mainPanel.VerticalScrollbarSize = 10;
+            this.mainPanel.VerticalScrollbarSize = 13;
             // 
             // dashboardLabel
             // 
             this.dashboardLabel.FontSize = MetroFramework.MetroLabelSize.Tall;
             this.dashboardLabel.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.dashboardLabel.Location = new System.Drawing.Point(277, 17);
-            this.dashboardLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.dashboardLabel.Location = new System.Drawing.Point(369, 21);
             this.dashboardLabel.Name = "dashboardLabel";
-            this.dashboardLabel.Size = new System.Drawing.Size(154, 32);
+            this.dashboardLabel.Size = new System.Drawing.Size(205, 39);
             this.dashboardLabel.TabIndex = 5;
             this.dashboardLabel.Text = "Dashboard";
             this.dashboardLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -246,10 +249,10 @@
             this.Refresh.ActiveControl = null;
             this.Refresh.BackColor = System.Drawing.Color.Transparent;
             this.Refresh.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.Refresh.Location = new System.Drawing.Point(-38, -5);
-            this.Refresh.Margin = new System.Windows.Forms.Padding(2);
+            this.Refresh.Location = new System.Drawing.Point(-51, -6);
+            this.Refresh.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Refresh.Name = "Refresh";
-            this.Refresh.Size = new System.Drawing.Size(112, 60);
+            this.Refresh.Size = new System.Drawing.Size(149, 74);
             this.Refresh.TabIndex = 6;
             this.Refresh.TileImage = ((System.Drawing.Image)(resources.GetObject("Refresh.TileImage")));
             this.Refresh.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -264,29 +267,29 @@
             this.metroPanel3.Controls.Add(this.Refresh);
             this.metroPanel3.HorizontalScrollbarBarColor = true;
             this.metroPanel3.HorizontalScrollbarHighlightOnWheel = false;
-            this.metroPanel3.HorizontalScrollbarSize = 8;
-            this.metroPanel3.Location = new System.Drawing.Point(720, 7);
-            this.metroPanel3.Margin = new System.Windows.Forms.Padding(2);
+            this.metroPanel3.HorizontalScrollbarSize = 10;
+            this.metroPanel3.Location = new System.Drawing.Point(960, 9);
+            this.metroPanel3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.metroPanel3.Name = "metroPanel3";
-            this.metroPanel3.Size = new System.Drawing.Size(47, 40);
+            this.metroPanel3.Size = new System.Drawing.Size(63, 49);
             this.metroPanel3.TabIndex = 2;
             this.metroPanel3.VerticalScrollbarBarColor = true;
             this.metroPanel3.VerticalScrollbarHighlightOnWheel = false;
-            this.metroPanel3.VerticalScrollbarSize = 8;
+            this.metroPanel3.VerticalScrollbarSize = 11;
             // 
             // MainMenu
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(861, 434);
+            this.ClientSize = new System.Drawing.Size(1148, 534);
             this.Controls.Add(this.metroPanel3);
             this.Controls.Add(this.dashboardLabel);
             this.Controls.Add(this.mainPanel);
             this.Controls.Add(this.sideBarPanel);
             this.ForeColor = System.Drawing.SystemColors.ActiveBorder;
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "MainMenu";
-            this.Padding = new System.Windows.Forms.Padding(15, 60, 15, 16);
+            this.Padding = new System.Windows.Forms.Padding(20, 74, 20, 20);
             this.Style = MetroFramework.MetroColorStyle.Green;
             this.Text = "MainMenu";
             this.Theme = MetroFramework.MetroThemeStyle.Default;

@@ -170,5 +170,10 @@ namespace ComponenteProiect
                 mainMenuControl.refreshGrids();
             }
         }
+
+        private void sideBarPanel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

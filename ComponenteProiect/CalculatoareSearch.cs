@@ -17,10 +17,12 @@ namespace ComponenteProiect
 {
     public partial class CalculatoareSearch: MetroForm
     {
+        CalculatoareAdminControl originalControl;
         AdministrareCalculator_FisierText adminCalc;
         int nrCalculatoare = 0;
-        public CalculatoareSearch()
+        public CalculatoareSearch( CalculatoareAdminControl originalControl)
         {
+            this.originalControl = originalControl;
             InitializeComponent();
             adminCalc = new AdministrareCalculator_FisierText(StorageFactory.getNumFisCalc());
 
@@ -37,9 +39,9 @@ namespace ComponenteProiect
             Calculator calculatorGasit = adminCalc.CautaCalculatorDenumire(denumire);
             if (calculatorGasit != null)
             {
-                MessageBox.Show("Calculator gasit: " + calculatorGasit.denumire + " " + calculatorGasit.producator + " " + calculatorGasit.CPU +
-                    " " + calculatorGasit.GPU + " " + calculatorGasit.capacitateRAM + " " + calculatorGasit.capacitateStocare +
-                    " " + calculatorGasit.carcasa + " " + calculatorGasit.frontPanel + " " + calculatorGasit.sursa);
+                List<Calculator> listaGasit = new List<Calculator> { calculatorGasit };
+                originalControl.AfisareCalculatoareGrid(listaGasit);
+                this.Close();
             }
             else
             {

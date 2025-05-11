@@ -17,8 +17,10 @@ namespace ComponenteProiect
 {
     public partial class UserSearch: MetroForm
     {
-        public UserSearch()
+        UserAdminControl originalControl;
+        public UserSearch(UserAdminControl originalControl)
         {
+            this.originalControl = originalControl;
             InitializeComponent();
         }
 
@@ -39,13 +41,19 @@ namespace ComponenteProiect
             User userGasit = admin.CautaUserNume(numeTextbox.Text, prenumeTextbox.Text);
             if (userGasit != null)
             {
-                MessageBox.Show("User gasit: " + userGasit.nume + " " + userGasit.prenume + " " + userGasit.gen + " " + userGasit.email +
-                    " " + userGasit.adresa + " " + userGasit.nrTelefon);
+                List<User> listaGasit = new List<User> { userGasit };
+                originalControl.AfisareUseriGrid(listaGasit);
+                this.Close();
             }
             else
             {
                 MessageBox.Show("Userul nu a fost gasit.");
             }
+
+        }
+
+        private void tabelRezultat_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
 
         }
     }
