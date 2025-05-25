@@ -28,6 +28,26 @@ namespace NivelStocareDate
                 swFisierText.WriteLine(u.conversieLaSir_PentruFisier());
         }
 
+        public void EditUser(User userNou, int idUser)
+        {
+            List<User> useri = this.GetUseri(out int nrUseri);
+            //rescrie tot fisierul
+            using (StreamWriter sw = new StreamWriter(numeFisier))
+            {
+                foreach (User user in useri)
+                {
+                    if (user.IdUser == idUser)
+                    {
+                        sw.WriteLine(userNou.conversieLaSir_PentruFisier());
+                    }
+                    else
+                    {
+                        sw.WriteLine(user.conversieLaSir_PentruFisier());
+                    }
+                }
+            }
+        }
+
         public List<User> GetUseri(out int nrUseri)
         {
             List<User> useri = new List<User>();

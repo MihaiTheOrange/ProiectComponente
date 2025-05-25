@@ -41,8 +41,7 @@ namespace ComponenteProiect
 
         private void AddUser_Click(object sender, EventArgs e)
         {
-            AddUserForm addUserForm = new AddUserForm();
-            addUserForm.ShowDialog();
+           
         }
 
         private void metroTile2_Click(object sender, EventArgs e)

@@ -17,7 +17,7 @@ namespace ComponenteProiect
     {
         AdministrareUser_FIsierText adminUser;
         private const string locatieFisierUseri = "C:\\Users\\Mihai\\source\\repos\\ProiectComponente\\ProiectComponente\\bin\\Debug\\Useri.txt";
-       
+        List<User> useri;
         public UserAdminControl()
         {
             InitializeComponent();
@@ -36,7 +36,7 @@ namespace ComponenteProiect
 
             adminUser = new AdministrareUser_FIsierText(locatieFisierUseri);
             int nrUseri = 0;
-            List<User> useri = adminUser.GetUseri(out nrUseri);
+            useri = adminUser.GetUseri(out nrUseri);
             AfisareUseriGrid(useri);
         }
         public void AfisareUseriGrid(List<User> useri)
@@ -53,13 +53,14 @@ namespace ComponenteProiect
         public void refreshGrid()
         {
             int nrUseri = 0;
-            List<User> useri = adminUser.GetUseri(out nrUseri);
+            useri = adminUser.GetUseri(out nrUseri);
             AfisareUseriGrid(useri);
         }
 
         private void UserAdminControl_Load(object sender, EventArgs e)
         {
-
+            useri = adminUser.GetUseri(out int nrUseri);
+            AfisareUseriGrid(useri);
         }
 
         private void UserAdminLabel_Click(object sender, EventArgs e)
@@ -69,7 +70,7 @@ namespace ComponenteProiect
 
         private void AddUser_Click(object sender, EventArgs e)
         {
-            AddUserForm addUserForm = new AddUserForm();
+            AddUserForm addUserForm = new AddUserForm(this);
             addUserForm.ShowDialog();
         }
 
@@ -84,9 +85,17 @@ namespace ComponenteProiect
 
         }
 
-        private void DeleteUser_Click(object sender, EventArgs e)
+        private void EditUser_Click(object sender, EventArgs e)
         {
+            int index = UserAdminGrid.CurrentRow?.Index ?? -1;
+            if (index >= 0)
+            {
+                User user = useri[index];
+                EditUserForm editUserForm = new EditUserForm(user, this);
+                editUserForm.ShowDialog();
 
+                //EditUserForm editUserForm = new EditUserForm();
+            }
         }
     }
 }

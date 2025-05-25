@@ -23,15 +23,17 @@ namespace ComponenteProiect
         private const string locatieFisierUseri = "C:\\Users\\Mihai\\source\\repos\\ProiectComponente\\ProiectComponente\\bin\\Debug\\Useri.txt";
         private const string locatieFisierCalculatoare = "C:\\Users\\Mihai\\source\\repos\\ProiectComponente\\ProiectComponente\\bin\\Debug\\Calculatoare.txt";
 
+        List<Calculator> calculatoare;
+        List<User> useri;
         public MainMenuControl()
         {
             InitializeComponent();
             adminUser = new AdministrareUser_FIsierText(locatieFisierUseri);
             int nrUseri = 0;
-            List<User> useri = adminUser.GetUseri(out nrUseri);
+            useri = adminUser.GetUseri(out nrUseri);
             adminCalculatoare = new AdministrareCalculator_FisierText(locatieFisierCalculatoare);
             int nrCalculatoare = 0;
-            List<Calculator> calculatoare = adminCalculatoare.GetCalculatoare(out nrCalculatoare);
+            calculatoare = adminCalculatoare.GetCalculatoare(out nrCalculatoare);
             AfisareUseriGrid(useri);
             AfisareCalculatoareGrid(calculatoare);
 
@@ -52,7 +54,9 @@ namespace ComponenteProiect
             UsersGrid.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
             //UsersGrid.BackgroundColor = Color.White;
             //UsersGrid.DefaultCellStyle.BackColor = Color.White;
+
             UsersGrid.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(245, 245, 245);
+           
             UsersGrid.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
             UsersGrid.RowHeadersVisible = false;
             UsersGrid.ReadOnly = true;
@@ -61,7 +65,10 @@ namespace ComponenteProiect
 
         private void MainMenuControl_Load(object sender, EventArgs e)
         {
-
+            calculatoare = adminCalculatoare.GetCalculatoare(out int nrCalculatoare);
+            useri = adminUser.GetUseri(out int nrUseri);
+            AfisareUseriGrid(useri);
+            AfisareCalculatoareGrid(calculatoare);
         }
 
         private void AfisareCalculatoareGrid(List<Calculator> calculatoare)
@@ -74,6 +81,7 @@ namespace ComponenteProiect
                 c.CPU,
                 c.GPU,
                 c.capacitateRAM,
+                IdUser = c.IdUser == -1 ? "Disponibil" : c.IdUser.ToString()
             }).ToList();
         }
 
@@ -91,28 +99,38 @@ namespace ComponenteProiect
         public void refreshGrids()
         {
             int nrUseri = 0;
-            List<User> useri = adminUser.GetUseri(out nrUseri);
+            useri = adminUser.GetUseri(out nrUseri);
             AfisareUseriGrid(useri);
 
             int nrCalculatoare = 0;
-            List<Calculator> calculatoare = adminCalculatoare.GetCalculatoare(out nrCalculatoare);
+            calculatoare = adminCalculatoare.GetCalculatoare(out nrCalculatoare);
             AfisareCalculatoareGrid(calculatoare);
 
         }
 
-        private void AfiseazaCalculatoare()
+        private void btnComanda_Click(object sender, EventArgs e)
         {
+            int indexCalc = CalculatoareGrid.CurrentRow?.Index ?? -1;
+            int indexUser = UsersGrid.CurrentRow?.Index ?? -1;
+            if (indexCalc == -1 || indexUser == -1)
+            {
+                MessageBox.Show("Selectati un calculator si un utilizator pentru a face o comanda!");
+                return;
+            }
+            Calculator calculatorSelectat = calculatoare[indexCalc];
+            User userSelectat = useri[indexUser];
             
-        }
+            if (calculatorSelectat.IdUser != -1)
+            {
+                MessageBox.Show("Calculatorul este deja comandat!");
+                return;
+            }
 
-        private void UserAdminLabel_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void metroPanel3_Paint(object sender, PaintEventArgs e)
-        {
-
+            calculatorSelectat.IdUser = userSelectat.IdUser;
+            adminCalculatoare.EditCalculator(calculatorSelectat);
+            
+            calculatoare = adminCalculatoare.GetCalculatoare(out int nrCalculatoare);
+            AfisareCalculatoareGrid(calculatoare);
         }
 
 
@@ -125,5 +143,6 @@ namespace ComponenteProiect
         {
 
         }
+
     }
 }

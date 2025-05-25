@@ -19,8 +19,10 @@ namespace ComponenteProiect
     {
         AdministrareUser_FIsierText adminUser;
         int nrUseri = 0;
-        public AddUserForm()
+        UserAdminControl originalControl;
+        public AddUserForm(UserAdminControl originalControl)
         {
+            this.originalControl = originalControl;
             InitializeComponent();
             adminUser = new AdministrareUser_FIsierText(StorageFactory.getNumFisUser());
             adminUser.GetUseri(out nrUseri);
@@ -102,6 +104,8 @@ namespace ComponenteProiect
                 userNou = new User(nume, prenume, gen, email, adresa, nrTelefon);
                 adminUser.AddUser(userNou, ref nrUseri);
                 MessageBox.Show("User adaugat cu succes");
+                originalControl.refreshGrid();
+                this.Close();
             }
             catch (Exception)
             {

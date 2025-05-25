@@ -18,13 +18,15 @@ namespace ComponenteProiect
         AdministrareCalculator_FisierText adminCalc;
         int idCalcNou;
         Calculator calcNou;
-        public EditCalculatorForm(Calculator calculator)
+        CalculatoareAdminControl originalControl;
+        public EditCalculatorForm(Calculator calculator, CalculatoareAdminControl originalControl)
         {
             adminCalc = new AdministrareCalculator_FisierText(StorageFactory.getNumFisCalc());
             InitializeComponent();
             initFields(calculator);
             idCalcNou = calculator.IdCalculator;
             calcNou = calculator;
+            this.originalControl = originalControl;
         }
 
 
@@ -171,6 +173,8 @@ namespace ComponenteProiect
 
 
                 adminCalc.EditCalculator(calcNou);
+
+                this.originalControl.refreshGrid();
                 this.Close();
 
             }

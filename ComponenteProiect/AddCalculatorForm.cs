@@ -1,17 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-
+﻿using LibrarieModele;
 using MetroFramework.Forms;
-using MetroFramework.Controls;
-using LibrarieModele;
 using NivelStocareDate;
+using System;
+using System.Windows.Forms;
 
 namespace ComponenteProiect
 {
@@ -19,11 +10,13 @@ namespace ComponenteProiect
     {
         AdministrareCalculator_FisierText adminCalc;
         int nrCalculatoare = 0;
-        public AddCalculatorForm()
+        CalculatoareAdminControl originalControl;
+        public AddCalculatorForm(CalculatoareAdminControl originalControl)
         {
             InitializeComponent();
             adminCalc = new AdministrareCalculator_FisierText(StorageFactory.getNumFisCalc());
             adminCalc.GetCalculatoare(out nrCalculatoare);
+            this.originalControl = originalControl;
         }
 
         private int getProducatorGPU()
@@ -113,17 +106,26 @@ namespace ComponenteProiect
                 int producatorGPU = getProducatorGPU();
                 string frontPanel = getFrontPanel();
 
+
                 calculatorNou = new Calculator(denumire, producator, CPU, producatorGPU, GPU, capacitateRAM, capacitateStocare, carcasa, frontPanel, sursa);
 
                 adminCalc.GetCalculatoare(out int nrCalculatoare);
 
                 adminCalc.AddCalculator(calculatorNou, ref nrCalculatoare);
-             
+                
+                MessageBox.Show("Calculator adaugat cu succes!");
+                originalControl.refreshGrid();
+                this.Close();
             }
             catch (Exception)
             {
                 MessageBox.Show("Eroare neasteptata");
             }
+        }
+
+        private void selectStock_SelectedItemChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

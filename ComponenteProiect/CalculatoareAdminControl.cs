@@ -66,7 +66,8 @@ namespace ComponenteProiect
 
         private void CalculatoareAdminControl_Load(object sender, EventArgs e)
         {
-
+            calculatoare = adminCalculatoare.GetCalculatoare(out int nrCalculatoare);
+            AfisareCalculatoareGrid(calculatoare);
         }
 
         private void CalculatoareAdminGrid_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -84,7 +85,7 @@ namespace ComponenteProiect
 
         private void AddCalc_Click(object sender, EventArgs e)
         {
-            AddCalculatorForm addCalculatorForm = new AddCalculatorForm();
+            AddCalculatorForm addCalculatorForm = new AddCalculatorForm(this);
             addCalculatorForm.ShowDialog();
         }
 
@@ -99,7 +100,7 @@ namespace ComponenteProiect
             if (index>=0)
             {
                 Calculator selectedCalc = calculatoare[index];
-                EditCalculatorForm editCalculatorForm = new EditCalculatorForm(selectedCalc);
+                EditCalculatorForm editCalculatorForm = new EditCalculatorForm(selectedCalc, this);
                 editCalculatorForm.ShowDialog();
             }
             

@@ -52,14 +52,14 @@
             this.intelRad = new MetroFramework.Controls.MetroRadioButton();
             this.ProducatorGpuBox = new System.Windows.Forms.GroupBox();
             this.FrontPanelBox = new System.Windows.Forms.GroupBox();
-            this.usb2chk = new MetroFramework.Controls.MetroCheckBox();
-            this.usb3chk = new MetroFramework.Controls.MetroCheckBox();
-            this.usb3_1chk = new MetroFramework.Controls.MetroCheckBox();
-            this.usbcchk = new MetroFramework.Controls.MetroCheckBox();
-            this.thunderboltchk = new MetroFramework.Controls.MetroCheckBox();
-            this.jack2_5chk = new MetroFramework.Controls.MetroCheckBox();
-            this.jack3_5chk = new MetroFramework.Controls.MetroCheckBox();
             this.jack6_35chk = new MetroFramework.Controls.MetroCheckBox();
+            this.jack3_5chk = new MetroFramework.Controls.MetroCheckBox();
+            this.jack2_5chk = new MetroFramework.Controls.MetroCheckBox();
+            this.thunderboltchk = new MetroFramework.Controls.MetroCheckBox();
+            this.usbcchk = new MetroFramework.Controls.MetroCheckBox();
+            this.usb3_1chk = new MetroFramework.Controls.MetroCheckBox();
+            this.usb3chk = new MetroFramework.Controls.MetroCheckBox();
+            this.usb2chk = new MetroFramework.Controls.MetroCheckBox();
             this.CancelButton = new MetroFramework.Controls.MetroButton();
             this.ProducatorGpuBox.SuspendLayout();
             this.FrontPanelBox.SuspendLayout();
@@ -149,7 +149,7 @@
             // 
             // AddCalc
             // 
-            this.AddCalc.Location = new System.Drawing.Point(282, 367);
+            this.AddCalc.Location = new System.Drawing.Point(282, 378);
             this.AddCalc.Name = "AddCalc";
             this.AddCalc.Size = new System.Drawing.Size(74, 24);
             this.AddCalc.TabIndex = 40;
@@ -163,9 +163,9 @@
             // 
             // 
             this.Sursa.CustomButton.Image = null;
-            this.Sursa.CustomButton.Location = new System.Drawing.Point(82, 1);
+            this.Sursa.CustomButton.Location = new System.Drawing.Point(62, 1);
             this.Sursa.CustomButton.Name = "";
-            this.Sursa.CustomButton.Size = new System.Drawing.Size(17, 17);
+            this.Sursa.CustomButton.Size = new System.Drawing.Size(13, 14);
             this.Sursa.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.Sursa.CustomButton.TabIndex = 1;
             this.Sursa.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
@@ -193,9 +193,9 @@
             // 
             // 
             this.Carcasa.CustomButton.Image = null;
-            this.Carcasa.CustomButton.Location = new System.Drawing.Point(82, 1);
+            this.Carcasa.CustomButton.Location = new System.Drawing.Point(62, 1);
             this.Carcasa.CustomButton.Name = "";
-            this.Carcasa.CustomButton.Size = new System.Drawing.Size(17, 17);
+            this.Carcasa.CustomButton.Size = new System.Drawing.Size(13, 14);
             this.Carcasa.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.Carcasa.CustomButton.TabIndex = 1;
             this.Carcasa.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
@@ -223,9 +223,9 @@
             // 
             // 
             this.Stocare.CustomButton.Image = null;
-            this.Stocare.CustomButton.Location = new System.Drawing.Point(82, 1);
+            this.Stocare.CustomButton.Location = new System.Drawing.Point(62, 1);
             this.Stocare.CustomButton.Name = "";
-            this.Stocare.CustomButton.Size = new System.Drawing.Size(17, 17);
+            this.Stocare.CustomButton.Size = new System.Drawing.Size(13, 14);
             this.Stocare.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.Stocare.CustomButton.TabIndex = 1;
             this.Stocare.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
@@ -253,9 +253,9 @@
             // 
             // 
             this.RAM.CustomButton.Image = null;
-            this.RAM.CustomButton.Location = new System.Drawing.Point(82, 1);
+            this.RAM.CustomButton.Location = new System.Drawing.Point(62, 1);
             this.RAM.CustomButton.Name = "";
-            this.RAM.CustomButton.Size = new System.Drawing.Size(17, 17);
+            this.RAM.CustomButton.Size = new System.Drawing.Size(13, 14);
             this.RAM.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.RAM.CustomButton.TabIndex = 1;
             this.RAM.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
@@ -283,9 +283,9 @@
             // 
             // 
             this.GPU.CustomButton.Image = null;
-            this.GPU.CustomButton.Location = new System.Drawing.Point(82, 1);
+            this.GPU.CustomButton.Location = new System.Drawing.Point(62, 1);
             this.GPU.CustomButton.Name = "";
-            this.GPU.CustomButton.Size = new System.Drawing.Size(17, 17);
+            this.GPU.CustomButton.Size = new System.Drawing.Size(13, 14);
             this.GPU.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.GPU.CustomButton.TabIndex = 1;
             this.GPU.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
@@ -313,9 +313,9 @@
             // 
             // 
             this.CPU.CustomButton.Image = null;
-            this.CPU.CustomButton.Location = new System.Drawing.Point(82, 1);
+            this.CPU.CustomButton.Location = new System.Drawing.Point(62, 1);
             this.CPU.CustomButton.Name = "";
-            this.CPU.CustomButton.Size = new System.Drawing.Size(17, 17);
+            this.CPU.CustomButton.Size = new System.Drawing.Size(13, 14);
             this.CPU.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.CPU.CustomButton.TabIndex = 1;
             this.CPU.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
@@ -343,9 +343,9 @@
             // 
             // 
             this.Producator.CustomButton.Image = null;
-            this.Producator.CustomButton.Location = new System.Drawing.Point(82, 1);
+            this.Producator.CustomButton.Location = new System.Drawing.Point(62, 1);
             this.Producator.CustomButton.Name = "";
-            this.Producator.CustomButton.Size = new System.Drawing.Size(17, 17);
+            this.Producator.CustomButton.Size = new System.Drawing.Size(13, 14);
             this.Producator.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.Producator.CustomButton.TabIndex = 1;
             this.Producator.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
@@ -373,9 +373,9 @@
             // 
             // 
             this.Denumire.CustomButton.Image = null;
-            this.Denumire.CustomButton.Location = new System.Drawing.Point(82, 1);
+            this.Denumire.CustomButton.Location = new System.Drawing.Point(62, 1);
             this.Denumire.CustomButton.Name = "";
-            this.Denumire.CustomButton.Size = new System.Drawing.Size(17, 17);
+            this.Denumire.CustomButton.Size = new System.Drawing.Size(13, 14);
             this.Denumire.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.Denumire.CustomButton.TabIndex = 1;
             this.Denumire.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
@@ -454,7 +454,7 @@
             this.ProducatorGpuBox.Controls.Add(this.qualcommRad);
             this.ProducatorGpuBox.Controls.Add(this.amdRad);
             this.ProducatorGpuBox.Controls.Add(this.nvidiaRad);
-            this.ProducatorGpuBox.Location = new System.Drawing.Point(10, 188);
+            this.ProducatorGpuBox.Location = new System.Drawing.Point(10, 190);
             this.ProducatorGpuBox.Name = "ProducatorGpuBox";
             this.ProducatorGpuBox.Size = new System.Drawing.Size(438, 79);
             this.ProducatorGpuBox.TabIndex = 56;
@@ -471,82 +471,12 @@
             this.FrontPanelBox.Controls.Add(this.usb3_1chk);
             this.FrontPanelBox.Controls.Add(this.usb3chk);
             this.FrontPanelBox.Controls.Add(this.usb2chk);
-            this.FrontPanelBox.Location = new System.Drawing.Point(10, 283);
+            this.FrontPanelBox.Location = new System.Drawing.Point(10, 275);
             this.FrontPanelBox.Name = "FrontPanelBox";
             this.FrontPanelBox.Size = new System.Drawing.Size(438, 78);
             this.FrontPanelBox.TabIndex = 57;
             this.FrontPanelBox.TabStop = false;
             this.FrontPanelBox.Text = "Front Panel";
-            // 
-            // usb2chk
-            // 
-            this.usb2chk.AutoSize = true;
-            this.usb2chk.Location = new System.Drawing.Point(6, 19);
-            this.usb2chk.Name = "usb2chk";
-            this.usb2chk.Size = new System.Drawing.Size(53, 15);
-            this.usb2chk.TabIndex = 0;
-            this.usb2chk.Text = "USB 2";
-            this.usb2chk.UseSelectable = true;
-            // 
-            // usb3chk
-            // 
-            this.usb3chk.AutoSize = true;
-            this.usb3chk.Location = new System.Drawing.Point(137, 19);
-            this.usb3chk.Name = "usb3chk";
-            this.usb3chk.Size = new System.Drawing.Size(53, 15);
-            this.usb3chk.TabIndex = 1;
-            this.usb3chk.Text = "USB 3";
-            this.usb3chk.UseSelectable = true;
-            // 
-            // usb3_1chk
-            // 
-            this.usb3_1chk.AutoSize = true;
-            this.usb3_1chk.Location = new System.Drawing.Point(237, 19);
-            this.usb3_1chk.Name = "usb3_1chk";
-            this.usb3_1chk.Size = new System.Drawing.Size(62, 15);
-            this.usb3_1chk.TabIndex = 2;
-            this.usb3_1chk.Text = "USB 3.1";
-            this.usb3_1chk.UseSelectable = true;
-            // 
-            // usbcchk
-            // 
-            this.usbcchk.AutoSize = true;
-            this.usbcchk.Location = new System.Drawing.Point(338, 19);
-            this.usbcchk.Name = "usbcchk";
-            this.usbcchk.Size = new System.Drawing.Size(55, 15);
-            this.usbcchk.TabIndex = 3;
-            this.usbcchk.Text = "USB C";
-            this.usbcchk.UseSelectable = true;
-            // 
-            // thunderboltchk
-            // 
-            this.thunderboltchk.AutoSize = true;
-            this.thunderboltchk.Location = new System.Drawing.Point(6, 40);
-            this.thunderboltchk.Name = "thunderboltchk";
-            this.thunderboltchk.Size = new System.Drawing.Size(88, 15);
-            this.thunderboltchk.TabIndex = 4;
-            this.thunderboltchk.Text = "Thunderbolt";
-            this.thunderboltchk.UseSelectable = true;
-            // 
-            // jack2_5chk
-            // 
-            this.jack2_5chk.AutoSize = true;
-            this.jack2_5chk.Location = new System.Drawing.Point(137, 40);
-            this.jack2_5chk.Name = "jack2_5chk";
-            this.jack2_5chk.Size = new System.Drawing.Size(63, 15);
-            this.jack2_5chk.TabIndex = 5;
-            this.jack2_5chk.Text = "Jack 2.5";
-            this.jack2_5chk.UseSelectable = true;
-            // 
-            // jack3_5chk
-            // 
-            this.jack3_5chk.AutoSize = true;
-            this.jack3_5chk.Location = new System.Drawing.Point(236, 40);
-            this.jack3_5chk.Name = "jack3_5chk";
-            this.jack3_5chk.Size = new System.Drawing.Size(63, 15);
-            this.jack3_5chk.TabIndex = 6;
-            this.jack3_5chk.Text = "Jack 3.5";
-            this.jack3_5chk.UseSelectable = true;
             // 
             // jack6_35chk
             // 
@@ -558,10 +488,80 @@
             this.jack6_35chk.Text = "Jack 6.35";
             this.jack6_35chk.UseSelectable = true;
             // 
+            // jack3_5chk
+            // 
+            this.jack3_5chk.AutoSize = true;
+            this.jack3_5chk.Location = new System.Drawing.Point(236, 40);
+            this.jack3_5chk.Name = "jack3_5chk";
+            this.jack3_5chk.Size = new System.Drawing.Size(63, 15);
+            this.jack3_5chk.TabIndex = 6;
+            this.jack3_5chk.Text = "Jack 3.5";
+            this.jack3_5chk.UseSelectable = true;
+            // 
+            // jack2_5chk
+            // 
+            this.jack2_5chk.AutoSize = true;
+            this.jack2_5chk.Location = new System.Drawing.Point(137, 40);
+            this.jack2_5chk.Name = "jack2_5chk";
+            this.jack2_5chk.Size = new System.Drawing.Size(63, 15);
+            this.jack2_5chk.TabIndex = 5;
+            this.jack2_5chk.Text = "Jack 2.5";
+            this.jack2_5chk.UseSelectable = true;
+            // 
+            // thunderboltchk
+            // 
+            this.thunderboltchk.AutoSize = true;
+            this.thunderboltchk.Location = new System.Drawing.Point(6, 40);
+            this.thunderboltchk.Name = "thunderboltchk";
+            this.thunderboltchk.Size = new System.Drawing.Size(88, 15);
+            this.thunderboltchk.TabIndex = 4;
+            this.thunderboltchk.Text = "Thunderbolt";
+            this.thunderboltchk.UseSelectable = true;
+            // 
+            // usbcchk
+            // 
+            this.usbcchk.AutoSize = true;
+            this.usbcchk.Location = new System.Drawing.Point(338, 19);
+            this.usbcchk.Name = "usbcchk";
+            this.usbcchk.Size = new System.Drawing.Size(55, 15);
+            this.usbcchk.TabIndex = 3;
+            this.usbcchk.Text = "USB C";
+            this.usbcchk.UseSelectable = true;
+            // 
+            // usb3_1chk
+            // 
+            this.usb3_1chk.AutoSize = true;
+            this.usb3_1chk.Location = new System.Drawing.Point(237, 19);
+            this.usb3_1chk.Name = "usb3_1chk";
+            this.usb3_1chk.Size = new System.Drawing.Size(62, 15);
+            this.usb3_1chk.TabIndex = 2;
+            this.usb3_1chk.Text = "USB 3.1";
+            this.usb3_1chk.UseSelectable = true;
+            // 
+            // usb3chk
+            // 
+            this.usb3chk.AutoSize = true;
+            this.usb3chk.Location = new System.Drawing.Point(137, 19);
+            this.usb3chk.Name = "usb3chk";
+            this.usb3chk.Size = new System.Drawing.Size(53, 15);
+            this.usb3chk.TabIndex = 1;
+            this.usb3chk.Text = "USB 3";
+            this.usb3chk.UseSelectable = true;
+            // 
+            // usb2chk
+            // 
+            this.usb2chk.AutoSize = true;
+            this.usb2chk.Location = new System.Drawing.Point(6, 19);
+            this.usb2chk.Name = "usb2chk";
+            this.usb2chk.Size = new System.Drawing.Size(53, 15);
+            this.usb2chk.TabIndex = 0;
+            this.usb2chk.Text = "USB 2";
+            this.usb2chk.UseSelectable = true;
+            // 
             // CancelButton
             // 
             this.CancelButton.BackColor = System.Drawing.Color.RosyBrown;
-            this.CancelButton.Location = new System.Drawing.Point(374, 367);
+            this.CancelButton.Location = new System.Drawing.Point(374, 378);
             this.CancelButton.Name = "CancelButton";
             this.CancelButton.Size = new System.Drawing.Size(74, 24);
             this.CancelButton.TabIndex = 58;
