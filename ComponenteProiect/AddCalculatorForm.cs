@@ -11,6 +11,7 @@ namespace ComponenteProiect
         AdministrareCalculator_FisierText adminCalc;
         int nrCalculatoare = 0;
         CalculatoareAdminControl originalControl;
+        string locatieFisierCalculatoare = StorageFactory.getNumFisCalc();
         public AddCalculatorForm(CalculatoareAdminControl originalControl)
         {
             InitializeComponent();
@@ -91,6 +92,7 @@ namespace ComponenteProiect
         {
             try
             {
+                MessageBox.Show(locatieFisierCalculatoare);
                 Calculator calculatorNou;
                 string denumire = Denumire.Text;
                 string producator = Producator.Text;

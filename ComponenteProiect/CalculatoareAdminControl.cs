@@ -16,7 +16,7 @@ namespace ComponenteProiect
     public partial class CalculatoareAdminControl: MetroUserControl
     {
         AdministrareCalculator_FisierText adminCalculatoare;
-        private const string locatieFisierCalculatoare = "C:\\Users\\Mihai\\source\\repos\\ProiectComponente\\ProiectComponente\\bin\\Debug\\Calculatoare.txt";
+        private string locatieFisierCalculatoare = StorageFactory.getNumFisCalc();
         List<Calculator> calculatoare;
         public CalculatoareAdminControl()
         {

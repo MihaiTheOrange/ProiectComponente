@@ -20,8 +20,8 @@ namespace ComponenteProiect
     {
         AdministrareUser_FIsierText adminUser;
         AdministrareCalculator_FisierText adminCalculatoare;
-        private const string locatieFisierUseri = "C:\\Users\\Mihai\\source\\repos\\ProiectComponente\\ProiectComponente\\bin\\Debug\\Useri.txt";
-        private const string locatieFisierCalculatoare = "C:\\Users\\Mihai\\source\\repos\\ProiectComponente\\ProiectComponente\\bin\\Debug\\Calculatoare.txt";
+        private string locatieFisierUseri = StorageFactory.getNumFisUser();
+        private string locatieFisierCalculatoare = StorageFactory.getNumFisCalc();
 
         List<Calculator> calculatoare;
         List<User> useri;

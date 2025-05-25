@@ -54,8 +54,8 @@ namespace ComponenteProiect
         private const int DIMENSIUNE_PAS_Y = 30;
         private const int DIMENSIUNE_PAS_X = 100;
 
-        private const string locatieFisierCalculatoare = "C:\\Users\\Mihai\\source\\repos\\ProiectComponente\\ProiectComponente\\bin\\Debug\\Calculatoare.txt";
-        private const string locatieFisierUseri = "C:\\Users\\Mihai\\source\\repos\\ProiectComponente\\ProiectComponente\\bin\\Debug\\Useri.txt";
+        private string locatieFisierCalculatoare = StorageFactory.getNumFisCalc();
+        private string locatieFisierUseri = StorageFactory.getNumFisUser();
         public Form1()
         {
             InitializeComponent();

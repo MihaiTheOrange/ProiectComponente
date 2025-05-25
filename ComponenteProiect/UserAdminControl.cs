@@ -16,7 +16,7 @@ namespace ComponenteProiect
     public partial class UserAdminControl: MetroUserControl
     {
         AdministrareUser_FIsierText adminUser;
-        private const string locatieFisierUseri = "C:\\Users\\Mihai\\source\\repos\\ProiectComponente\\ProiectComponente\\bin\\Debug\\Useri.txt";
+        private string locatieFisierUseri = StorageFactory.getNumFisUser();
         List<User> useri;
         public UserAdminControl()
         {
