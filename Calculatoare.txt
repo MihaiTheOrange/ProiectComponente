@@ -1,2 +1,2 @@
-1;Asus;Asus;i5;Intel;gtx 1080;16;120;Asus;USB3, USB3_1, Jack2_5, Jack3_5;650;-1;
-2;asd;asd;sad;Qualcomm;asd;12;12;1212;Jack6_35;12;-1;
+1;Asus;Asus;i5;Intel;gtx 1080;16;120;Asus;USB3, USB3_1, Jack2_5, Jack3_5;650;1;
+2;Corsair;Corsair;I7;Intel;RTX 3070;32;1000;Corsair;USB2, Thunderbolt, Jack6_35;650;-1;
