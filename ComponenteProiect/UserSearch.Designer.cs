@@ -199,7 +199,6 @@
             this.tabelRezultat.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.tabelRezultat.Size = new System.Drawing.Size(413, 193);
             this.tabelRezultat.TabIndex = 48;
-            this.tabelRezultat.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.tabelRezultat_CellContentClick);
             // 
             // UserSearch
             // 

@@ -71,7 +71,6 @@
             this.sideBarPanel.VerticalScrollbarBarColor = true;
             this.sideBarPanel.VerticalScrollbarHighlightOnWheel = false;
             this.sideBarPanel.VerticalScrollbarSize = 11;
-            this.sideBarPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.sideBarPanel_Paint);
             // 
             // metroPanel2
             // 
@@ -198,7 +197,6 @@
             this.MainMenuTile.Enter += new System.EventHandler(this.MainMenuTile_Enter);
             this.MainMenuTile.MouseEnter += new System.EventHandler(this.MainMenuTile_MouseEnter);
             this.MainMenuTile.MouseLeave += new System.EventHandler(this.MainMenuTile_MouseLeave);
-            this.MainMenuTile.MouseHover += new System.EventHandler(this.MainMenuTile_MouseHover);
             // 
             // meniuriLabel
             // 

@@ -1,15 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Drawing;
-using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+﻿using LibrarieModele;
 using MetroFramework.Controls;
-using LibrarieModele;
 using NivelStocareDate;
+using System;
+using System.Collections.Generic;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Windows.Forms;
 
 namespace ComponenteProiect
 {
@@ -26,8 +23,6 @@ namespace ComponenteProiect
             UserAdminGrid.EnableHeadersVisualStyles = false;
             UserAdminGrid.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(40, 167, 69); // Green
             UserAdminGrid.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
-            //UserAdminGrid.BackgroundColor = Color.White;
-            //UserAdminGrid.DefaultCellStyle.BackColor = Color.White;
             UserAdminGrid.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(245, 245, 245);
             UserAdminGrid.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
             UserAdminGrid.RowHeadersVisible = false;
@@ -63,10 +58,6 @@ namespace ComponenteProiect
             AfisareUseriGrid(useri);
         }
 
-        private void UserAdminLabel_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void AddUser_Click(object sender, EventArgs e)
         {
@@ -94,7 +85,6 @@ namespace ComponenteProiect
                 EditUserForm editUserForm = new EditUserForm(user, this);
                 editUserForm.ShowDialog();
 
-                //EditUserForm editUserForm = new EditUserForm();
             }
         }
     }

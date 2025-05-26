@@ -1,17 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-
-using MetroFramework.Forms;
+﻿using LibrarieModele;
 using MetroFramework.Controls;
-using LibrarieModele;
+using MetroFramework.Forms;
 using NivelStocareDate;
+using System;
+using System.Drawing;
+using System.Windows.Forms;
 
 namespace ComponenteProiect
 {
@@ -68,16 +61,6 @@ namespace ComponenteProiect
         }
 
 
-        private void metroTextBox1_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void Telefon_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void AddButton_Click(object sender, EventArgs e)
         {
             try
@@ -118,15 +101,6 @@ namespace ComponenteProiect
             this.Close();
         }
 
-        private void GenN_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void GenF_CheckedChanged(object sender, EventArgs e)
-        {
-            
-        }
 
         private void Nume_TextChanged(object sender, EventArgs e)
         {

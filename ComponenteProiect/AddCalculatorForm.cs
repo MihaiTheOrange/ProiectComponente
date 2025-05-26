@@ -78,11 +78,6 @@ namespace ComponenteProiect
 
         }
 
-        private void lBoxProducator_GPU_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void CancelButton_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -125,9 +120,5 @@ namespace ComponenteProiect
             }
         }
 
-        private void selectStock_SelectedItemChanged(object sender, EventArgs e)
-        {
-
-        }
     }
 }

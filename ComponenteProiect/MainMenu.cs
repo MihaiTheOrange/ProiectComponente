@@ -1,16 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-
-
+﻿using MetroFramework.Controls;
 using MetroFramework.Forms;
-using MetroFramework.Controls;
+using System;
+using System.Drawing;
+using System.Windows.Forms;
 
 namespace ComponenteProiect
 {
@@ -82,9 +74,6 @@ namespace ComponenteProiect
 
         private void metroTile2_Click(object sender, EventArgs e)
         {
-            //this.Hide();
-            //Form1 form1 = new Form1();
-            //form1.Show();
             mainPanel.Controls.Clear();
             mainPanel.Controls.Add(calculatoareAdminControl);
             activeGrid = "calculatoare";
@@ -97,22 +86,9 @@ namespace ComponenteProiect
 
         private void Useri_Comenzi_Click(object sender, EventArgs e)
         {
-            //this.Hide();
-            //UsersForm userForm = new UsersForm(this);
-            //userForm.Show();
             mainPanel.Controls.Clear();
             mainPanel.Controls.Add(userAdminControl);
             activeGrid = "useri";
-        }
-
-        private void metroLabel2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void MainMenuTile_MouseHover(object sender, EventArgs e)
-        {
-
         }
 
         private void MainMenuTile_MouseLeave(object sender, EventArgs e)
@@ -134,26 +110,12 @@ namespace ComponenteProiect
             ((MetroFramework.Controls.MetroTile)sender).ForeColor = Color.DarkGreen;
         }
 
-        private void MainMenuTile_Leave(object sender, EventArgs e)
-        {
-            ((MetroFramework.Controls.MetroTile)sender).ForeColor = Color.Black;
-        }
-
         private void MainMenuTile_MouseEnter(object sender, EventArgs e)
         {
             ((MetroFramework.Controls.MetroTile)sender).ForeColor = Color.DarkGreen;
             changeToGreen((MetroFramework.Controls.MetroTile)sender);
         }
 
-        private void calculatoareLabel_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void metroGrid1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
 
         private void Refresh_Click(object sender, EventArgs e)
         {
@@ -171,9 +133,5 @@ namespace ComponenteProiect
             }
         }
 
-        private void sideBarPanel_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
     }
 }

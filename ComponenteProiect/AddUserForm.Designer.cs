@@ -155,7 +155,7 @@
             this.Telefon.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.Telefon.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             this.Telefon.TextChanged += new System.EventHandler(this.Telefon_TextChanged);
-            this.Telefon.Click += new System.EventHandler(this.Telefon_Click);
+            
             // 
             // Adresa
             // 
@@ -300,7 +300,6 @@
             this.GenN.TabIndex = 50;
             this.GenN.Text = "N";
             this.GenN.UseSelectable = true;
-            this.GenN.CheckedChanged += new System.EventHandler(this.GenN_CheckedChanged);
             // 
             // GenF
             // 
@@ -312,7 +311,6 @@
             this.GenF.Text = "F";
             this.GenF.UseCustomForeColor = true;
             this.GenF.UseSelectable = true;
-            this.GenF.CheckedChanged += new System.EventHandler(this.GenF_CheckedChanged);
             // 
             // lBoxGen
             // 

@@ -1,1 +1,2 @@
 1;Florea;Mihai;Feminin;mohai@gmail.com;adresa;0749467469;
+2;Moraru;Alex;Feminin;moraru@gmail.com;strada principala ;0722567983;

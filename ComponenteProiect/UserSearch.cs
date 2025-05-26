@@ -52,9 +52,5 @@ namespace ComponenteProiect
 
         }
 
-        private void tabelRezultat_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
     }
 }

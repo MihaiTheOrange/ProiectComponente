@@ -85,7 +85,6 @@
             this.CalculatoareGrid.Size = new System.Drawing.Size(597, 132);
             this.CalculatoareGrid.TabIndex = 5;
             this.CalculatoareGrid.UseCustomBackColor = true;
-            this.CalculatoareGrid.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.metroGrid1_CellContentClick);
             // 
             // UsersGrid
             // 
@@ -133,7 +132,6 @@
             this.UsersGrid.TabIndex = 6;
             this.UsersGrid.UseCustomBackColor = true;
             this.UsersGrid.UseStyleColors = true;
-            this.UsersGrid.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.UsersGrid_CellContentClick);
             // 
             // btnComanda
             // 
